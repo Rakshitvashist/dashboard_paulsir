@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Trading Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #64748b;
+            --success: #22c55e;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --background: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--background);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 2rem;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-title h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .date-badge {
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            border: 1px solid var(--border);
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        /* Filters */
+        .filter-bar {
+            background: var(--card-bg);
+            padding: 1.25rem;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            border: 1px solid var(--border);
+        }
+
+        .search-box {
+            flex: 1;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.75rem;
+            color: white;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary);
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .filter-group label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .filter-group select {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--border);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Trader Card */
+        .trader-card {
+            background: var(--card-bg);
+            border-radius: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .trader-card.master {
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+        }
+
+        .trader-header {
+            padding: 1.5rem 2rem;
+            display: grid;
+            grid-template-columns: 180px repeat(4, 1fr) 50px;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .trader-info h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .master-badge {
+            background: var(--primary);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .metric-cell {
+            text-align: center;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-value {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .pos-badge {
+            padding: 2px 10px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .pos-long { background: rgba(34, 197, 94, 0.2); color: var(--success); }
+        .pos-short { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+        .pos-flat { background: rgba(148, 163, 184, 0.2); color: var(--text-muted); }
+
+        .expand-btn {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            transition: transform 0.3s ease;
+        }
+
+        .trader-card.expanded .expand-btn {
+            transform: rotate(180deg);
+        }
+
+        /* Detail View */
+        .trader-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 1px solid var(--border);
+        }
+
+        .trader-card.expanded .trader-content {
+            max-height: 2000px;
+        }
+
+        .content-inner {
+            padding: 2rem;
+        }
+
+        .tab-nav {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab-btn {
+            padding: 0.75rem 0;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-btn.active {
+            color: var(--primary);
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 1rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .side-b { color: var(--success); font-weight: 700; }
+        .side-s { color: var(--danger); font-weight: 700; }
+
+        .pl-positive { color: var(--success); }
+        .pl-negative { color: var(--danger); }
+
+        .symbol-tag {
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 4px;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--background);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,255,255,0.1);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="header-title">
+                <h1>Institutional Dashboard</h1>
+                <p>Real-time Execution & Position Monitoring</p>
+            </div>
+            <div class="date-badge" id="currentDate">May 14, 2026</div>
+        </header>
+
+        <div id="globalStats" class="stats-grid">
+            <!-- Stats cards will be injected here -->
+        </div>
+
+        <div class="filter-bar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search accounts, symbols..." oninput="handleFilter()">
+            </div>
+            <div class="filter-group">
+                <label>Position</label>
+                <select id="posFilter" onchange="handleFilter()">
+                    <option value="all">All</option>
+                    <option value="long">Long</option>
+                    <option value="short">Short</option>
+                    <option value="flat">Flat</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Sort By</label>
+                <select id="sortSelect" onchange="handleSort()">
+                    <option value="pl">P&L (High to Low)</option>
+                    <option value="volume">Volume</option>
+                    <option value="trades">Trade Count</option>
+                    <option value="account">Account Name</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="tradersContainer">
+            <!-- Trader cards will be injected here -->
+        </div>
+    </div>
+
+    <script>
+        let rawData = [];
+        let filteredData = [];
+
+        async function init() {
+            try {
+                const response = await fetch('trader_data.json');
+                if (!response.ok) throw new Error('Data not found');
+                rawData = await response.json();
+                
+                // Initial sort: Master first, then by P&L
+                handleSort();
+                updateStats();
+                render();
+                
+                document.getElementById('loader').style.opacity = '0';
+                setTimeout(() => document.getElementById('loader').style.display = 'none', 500);
+            } catch (err) {
+                console.error(err);
+                document.getElementById('tradersContainer').innerHTML = `<div style="text-align:center; padding: 5rem; color: var(--text-muted)">Failed to load data. Run process_trader_data.py first.</div>`;
+                document.getElementById('loader').style.display = 'none';
+            }
+        }
+
+        function updateStats() {
+            const totalAccounts = rawData.length;
+            const totalPL = rawData.reduce((sum, t) => sum + t.gross_pl, 0);
+            const totalTrades = rawData.reduce((sum, t) => sum + t.num_trades, 0);
+            const totalVolume = rawData.reduce((sum, t) => sum + t.total_buy_qty + t.total_sell_qty, 0);
+
+            const statsHTML = `
+                <div class="stat-card">
+                    <div class="stat-label">Total Net P&L</div>
+                    <div class="stat-value ${totalPL >= 0 ? 'pl-positive' : 'pl-negative'}">$${formatCurrency(totalPL)}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Total Volume</div>
+                    <div class="stat-value">${totalVolume.toLocaleString()} <span style="font-size: 0.9rem; color: var(--text-muted)">lots</span></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Active Accounts</div>
+                    <div class="stat-value">${totalAccounts}</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Executions</div>
+                    <div class="stat-value">${totalTrades.toLocaleString()}</div>
+                </div>
+            `;
+            document.getElementById('globalStats').innerHTML = statsHTML;
+        }
+
+        function render() {
+            const container = document.getElementById('tradersContainer');
+            container.innerHTML = filteredData.map((trader, idx) => `
+                <div class="trader-card ${trader.is_master ? 'master' : ''}" id="card-${idx}">
+                    <div class="trader-header" onclick="toggleCard(${idx})">
+                        <div class="trader-info">
+                            <div class="metric-label">Account</div>
+                            <h3>${trader.account}${trader.is_master ? '<span class="master-badge">MASTER</span>' : ''}</h3>
+                        </div>
+                        <div class="metric-cell">
+                            <div class="metric-label">Position</div>
+                            <div class="metric-value">
+                                <span class="pos-badge ${getPosClass(trader.net_position)}">
+                                    ${trader.net_position > 0 ? '+' : ''}${trader.net_position}
+                                </span>
+                            </div>
+                        </div>
+                        <div class="metric-cell">
+                            <div class="metric-label">Today's Volume</div>
+                            <div class="metric-value">${(trader.total_buy_qty + trader.total_sell_qty).toLocaleString()}</div>
+                        </div>
+                        <div class="metric-cell">
+                            <div class="metric-label">Unrealized P&L</div>
+                            <div class="metric-value ${trader.gross_pl >= 0 ? 'pl-positive' : 'pl-negative'}">
+                                $${formatCurrency(trader.gross_pl)}
+                            </div>
+                        </div>
+                        <div class="metric-cell">
+                            <div class="metric-label">Volatility</div>
+                            <div class="metric-value">${trader.volatility.toFixed(4)}</div>
+                        </div>
+                        <div class="expand-btn">▼</div>
+                    </div>
+                    
+                    <div class="trader-content">
+                        <div class="content-inner">
+                            <div class="tab-nav">
+                                <button class="tab-btn active" onclick="switchTab(event, ${idx}, 'positions')">Open Positions (${trader.positions.length})</button>
+                                <button class="tab-btn" onclick="switchTab(event, ${idx}, 'trades')">Execution Log (${trader.trades.length})</button>
+                                <button class="tab-btn" onclick="switchTab(event, ${idx}, 'summary')">Overview</button>
+                            </div>
+
+                            <div class="tab-panel active" id="panel-${idx}-positions">
+                                ${renderPositionsTable(trader.positions)}
+                            </div>
+                            <div class="tab-panel" id="panel-${idx}-trades">
+                                ${renderTradesTable(trader.trades)}
+                            </div>
+                            <div class="tab-panel" id="panel-${idx}-summary">
+                                <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                                    <div class="stat-card" style="background: rgba(15, 23, 42, 0.4)">
+                                        <div class="stat-label">Average Buy</div>
+                                        <div class="stat-value" style="font-size: 1.2rem">${trader.avg_buy.toFixed(4)}</div>
+                                        <div class="stat-label" style="margin-top:1rem">Average Sell</div>
+                                        <div class="stat-value" style="font-size: 1.2rem">${trader.avg_sell.toFixed(4)}</div>
+                                    </div>
+                                    <div class="stat-card" style="background: rgba(15, 23, 42, 0.4)">
+                                        <div class="stat-label">Symbols Traded</div>
+                                        <div>${trader.symbols.map(s => `<span class="symbol-tag">${s}</span>`).join('')}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderPositionsTable(positions) {
+            if (!positions.length) return '<p style="color:var(--text-muted)">No open positions found in report.</p>';
+            return `
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Month</th>
+                            <th>Side</th>
+                            <th>Qty</th>
+                            <th>Avg Price</th>
+                            <th>Settlement</th>
+                            <th>P&L</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${positions.map(p => `
+                            <tr>
+                                <td><strong>${p.Symbol}</strong></td>
+                                <td>${p.Month}</td>
+                                <td class="side-${p.Side.toLowerCase()}">${p.Side}</td>
+                                <td>${p.Qty}</td>
+                                <td>${p.Price.toFixed(4)}</td>
+                                <td>${p.Settlement.toFixed(4)}</td>
+                                <td class="${p.PL >= 0 ? 'pl-positive' : 'pl-negative'}">$${p.PL.toLocaleString()}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+        }
+
+        function renderTradesTable(trades) {
+            if (!trades.length) return '<p style="color:var(--text-muted)">No trade executions recorded for this period.</p>';
+            return `
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Symbol</th>
+                            <th>Side</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Exchange</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${trades.slice(0, 100).map(t => `
+                            <tr>
+                                <td style="color:var(--text-muted)">${t.Time}</td>
+                                <td><strong>${t.Symbol}</strong></td>
+                                <td class="side-${t.Side.toLowerCase()}">${t.Side === 'B' ? 'BUY' : 'SELL'}</td>
+                                <td>${t.Qty.toLocaleString()}</td>
+                                <td>${t.Price.toFixed(4)}</td>
+                                <td>${t.Exchange}</td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+                ${trades.length > 100 ? `<p style="padding:1rem; text-align:center; color:var(--text-muted)">Showing first 100 trades...</p>` : ''}
+            `;
+        }
+
+        function toggleCard(idx) {
+            document.getElementById(`card-${idx}`).classList.toggle('expanded');
+        }
+
+        function switchTab(e, idx, panelType) {
+            e.stopPropagation();
+            const card = document.getElementById(`card-${idx}`);
+            card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            
+            card.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.getElementById(`panel-${idx}-${panelType}`).classList.add('active');
+        }
+
+        function handleFilter() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const pos = document.getElementById('posFilter').value;
+
+            filteredData = rawData.filter(t => {
+                const matchesSearch = t.account.toLowerCase().includes(search) || 
+                                    t.symbols.some(s => s.toLowerCase().includes(search));
+                
+                let matchesPos = true;
+                if (pos === 'long') matchesPos = t.net_position > 0;
+                if (pos === 'short') matchesPos = t.net_position < 0;
+                if (pos === 'flat') matchesPos = t.net_position === 0;
+
+                return matchesSearch && matchesPos;
+            });
+            render();
+        }
+
+        function handleSort() {
+            const val = document.getElementById('sortSelect').value;
+            const data = [...rawData];
+
+            data.sort((a, b) => {
+                // Always keep master at top
+                if (a.is_master && !b.is_master) return -1;
+                if (!a.is_master && b.is_master) return 1;
+
+                if (val === 'pl') return b.gross_pl - a.gross_pl;
+                if (val === 'volume') return (b.total_buy_qty + b.total_sell_qty) - (a.total_buy_qty + a.total_sell_qty);
+                if (val === 'trades') return b.num_trades - a.num_trades;
+                if (val === 'account') return a.account.localeCompare(b.account);
+                return 0;
+            });
+
+            filteredData = data;
+            render();
+        }
+
+        function formatCurrency(val) {
+            return val.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function getPosClass(val) {
+            if (val > 0) return 'pos-long';
+            if (val < 0) return 'pos-short';
+            return 'pos-flat';
+        }
+
+        init();
+    </script>
+</body>
+
+</html>

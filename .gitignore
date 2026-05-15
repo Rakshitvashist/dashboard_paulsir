@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+dash/
+.venv/
+env/
+venv/
+
+# Dashboard Data (Optional: ignore if you want to update via GitHub Actions, 
+# but for now we'll keep it so it shows something on initial deploy)
+# trader_data.json
+
+# Logs
+*.log
