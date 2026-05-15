@@ -152,7 +152,7 @@
         .row-header {
             padding: 1.25rem 1.5rem;
             display: grid;
-            grid-template-columns: 150px 120px 150px 150px 150px 150px 1fr 40px;
+            grid-template-columns: 150px 120px 120px 150px 150px 150px 150px 1fr 40px;
             align-items: center;
             cursor: pointer;
         }
@@ -303,7 +303,8 @@
             </select>
             <select class="select-input" id="sortSelect" onchange="sortData()">
                 <option value="pl">MTM (P&L)</option>
-                <option value="volume">Buy Value</option>
+                <option value="volume">Volume (Qty)</option>
+                <option value="buy_value">Buy Value ($)</option>
                 <option value="trades">Trade Count</option>
                 <option value="id">Account ID</option>
             </select>
@@ -351,11 +352,16 @@
             const totalBuyVal = allData.reduce((s, t) => s + t.buy_value, 0);
             const totalSellVal = allData.reduce((s, t) => s + t.sell_value, 0);
             const totalTrades = allData.reduce((s, t) => s + t.num_trades, 0);
+            const totalLots = allData.reduce((s, t) => s + t.total_buy_qty + t.total_sell_qty, 0);
 
             document.getElementById('globalSummary').innerHTML = `
                 <div class="summary-card">
                     <div class="summary-label">Aggregate Gross P&L (MTM)</div>
                     <div class="summary-value ${totalPL >= 0 ? 'val-pos' : 'val-neg'}">$${formatNum(totalPL)}</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-label">Total Session Volume</div>
+                    <div class="summary-value">${totalLots.toLocaleString()}</div>
                 </div>
                 <div class="summary-card">
                     <div class="summary-label">Total Purchase Value</div>
@@ -387,6 +393,10 @@
                                     ${trader.net_position > 0 ? '+' : ''}${trader.net_position}
                                 </span>
                             </div>
+                        </div>
+                        <div>
+                            <div class="cell-label">Volume</div>
+                            <div class="cell-value">${(trader.total_buy_qty + trader.total_sell_qty).toLocaleString()}</div>
                         </div>
                         <div>
                             <div class="cell-label">Buy Value</div>
@@ -538,7 +548,8 @@
                 if (a.is_master && !b.is_master) return -1;
                 if (!a.is_master && b.is_master) return 1;
                 if (val === 'pl') return b.gross_pl - a.gross_pl;
-                if (val === 'volume') return b.buy_value - a.buy_value;
+                if (val === 'volume') return (b.total_buy_qty + b.total_sell_qty) - (a.total_buy_qty + a.total_sell_qty);
+                if (val === 'buy_value') return b.buy_value - a.buy_value;
                 if (val === 'trades') return b.num_trades - a.num_trades;
                 if (val === 'id') return a.account.localeCompare(b.account);
                 return 0;
