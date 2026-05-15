@@ -260,6 +260,20 @@
         }
 
         .loading-text { margin-top: 1rem; font-weight: 600; color: var(--text-muted); }
+
+        /* Error Debugger */
+        .error-debugger {
+            display: none;
+            background: #fef2f2;
+            border: 1px solid #fee2e2;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            color: #991b1b;
+            font-size: 0.85rem;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -277,6 +291,7 @@
     </nav>
 
     <div class="container">
+        <div id="errorDebugger" class="error-debugger"></div>
         <div id="globalSummary" class="summary-grid"></div>
         <div class="controls">
             <input type="text" class="search-input" id="searchBox" placeholder="Search by Account ID, Symbol or Side..." oninput="filterData()">
@@ -302,8 +317,15 @@
 
         async function loadDashboard() {
             try {
-                // Using ./ path for better compatibility with GitHub Pages
-                const res = await fetch('./trader_data.json');
+                // Determine the correct path (handle local vs GitHub subfolder)
+                const path = window.location.pathname.endsWith('/') ? 'trader_data.json' : './trader_data.json';
+                console.log('Fetching data from:', path);
+
+                const res = await fetch(path);
+                if (!res.ok) {
+                    throw new Error(`HTTP Error: ${res.status} - ${res.statusText}`);
+                }
+                
                 allData = await res.json();
                 filteredData = [...allData];
                 
@@ -312,7 +334,15 @@
                 document.getElementById('loader').style.display = 'none';
             } catch (e) {
                 console.error(e);
-                document.getElementById('loader').innerHTML = '<div style="color:red; padding: 2rem; text-align:center;">Failed to load data. Ensure trader_data.json is available in the root.</div>';
+                document.getElementById('loader').style.display = 'none';
+                const debug = document.getElementById('errorDebugger');
+                debug.style.display = 'block';
+                debug.innerHTML = `
+                    <strong>Data Load Failed</strong><br/>
+                    URL: ${window.location.href}<br/>
+                    Error: ${e.message}<br/><br/>
+                    <em>Tip: Ensure 'trader_data.json' exists in the same folder as this page on GitHub.</em>
+                `;
             }
         }
 

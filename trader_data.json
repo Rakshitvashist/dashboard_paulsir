@@ -15031,7 +15031,7 @@
     "positions": []
   },
   {
-    "account": "XOF8020",
+    "account": "XOF8001",
     "is_master": false,
     "total_buy_qty": 0,
     "buy_value": 0.0,
@@ -15039,8 +15039,8 @@
     "total_sell_qty": 0,
     "sell_value": 0.0,
     "avg_sell": 0.0,
-    "net_position": -12,
-    "gross_pl": -184470.0,
+    "net_position": -32,
+    "gross_pl": -167600.0,
     "num_trades": 0,
     "volatility": 0.0,
     "symbols": [
@@ -15056,360 +15056,270 @@
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4677.9,
+        "AvgPrice": 4677.0,
         "ClosingPrice": 4685.3,
-        "MTM": 74.0
+        "MTM": 83.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4678.4,
+        "AvgPrice": 4677.7,
         "ClosingPrice": 4685.3,
-        "MTM": 69.0
+        "MTM": 76.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4678.9,
+        "AvgPrice": 4681.1,
         "ClosingPrice": 4685.3,
-        "MTM": 64.0
+        "MTM": 42.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4679.0,
+        "AvgPrice": 4683.6,
         "ClosingPrice": 4685.3,
-        "MTM": 63.0
+        "MTM": 17.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4680.1,
+        "AvgPrice": 4683.6,
         "ClosingPrice": 4685.3,
-        "MTM": 52.0
+        "MTM": 17.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4680.6,
+        "AvgPrice": 4683.8,
         "ClosingPrice": 4685.3,
-        "MTM": 47.0
+        "MTM": 15.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4680.9,
+        "AvgPrice": 4683.8,
         "ClosingPrice": 4685.3,
-        "MTM": 44.0
+        "MTM": 15.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4681.4,
+        "AvgPrice": 4684.0,
         "ClosingPrice": 4685.3,
-        "MTM": 39.0
+        "MTM": 13.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4681.9,
+        "AvgPrice": 4684.4,
         "ClosingPrice": 4685.3,
-        "MTM": 34.0
+        "MTM": 9.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4682.1,
+        "AvgPrice": 4684.4,
         "ClosingPrice": 4685.3,
-        "MTM": 32.0
+        "MTM": 9.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4682.2,
+        "AvgPrice": 4684.4,
         "ClosingPrice": 4685.3,
-        "MTM": 31.0
+        "MTM": 9.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4682.3,
+        "AvgPrice": 4687.1,
         "ClosingPrice": 4685.3,
-        "MTM": 30.0
+        "MTM": -18.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4682.9,
+        "AvgPrice": 4687.6,
         "ClosingPrice": 4685.3,
-        "MTM": 24.0
+        "MTM": -23.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4683.4,
+        "AvgPrice": 4689.1,
         "ClosingPrice": 4685.3,
-        "MTM": 19.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4683.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 19.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4684.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 8.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4686.8,
-        "ClosingPrice": 4685.3,
-        "MTM": -15.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4688.5,
-        "ClosingPrice": 4685.3,
-        "MTM": -32.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4689.0,
-        "ClosingPrice": 4685.3,
-        "MTM": -37.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4689.3,
-        "ClosingPrice": 4685.3,
-        "MTM": -40.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4691.3,
-        "ClosingPrice": 4685.3,
-        "MTM": -60.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4693.1,
-        "ClosingPrice": 4685.3,
-        "MTM": -78.0
+        "MTM": -38.0
       },
       {
         "Symbol": "SIL",
         "Month": "Jul 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 87.095,
+        "AvgPrice": 87.28,
         "ClosingPrice": 85.328,
-        "MTM": -1767.0
+        "MTM": -1952.0
+      },
+      {
+        "Symbol": "SIL",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.3,
+        "ClosingPrice": 85.328,
+        "MTM": -1972.0
+      },
+      {
+        "Symbol": "SIL",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.38,
+        "ClosingPrice": 85.328,
+        "MTM": -2052.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4706.5,
+        "AvgPrice": 4705.1,
         "ClosingPrice": 4734.0,
-        "MTM": -8250.0
+        "MTM": -8670.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4707.0,
+        "AvgPrice": 4705.6,
         "ClosingPrice": 4734.0,
-        "MTM": -8100.0
+        "MTM": -8520.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4707.3,
+        "AvgPrice": 4706.3,
         "ClosingPrice": 4734.0,
-        "MTM": -8010.0
+        "MTM": -8310.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4707.5,
+        "AvgPrice": 4709.7,
         "ClosingPrice": 4734.0,
-        "MTM": -7950.0
+        "MTM": -7290.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4709.1,
+        "AvgPrice": 4711.9,
         "ClosingPrice": 4734.0,
-        "MTM": -7470.0
+        "MTM": -6630.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4709.3,
+        "AvgPrice": 4711.9,
         "ClosingPrice": 4734.0,
-        "MTM": -7410.0
+        "MTM": -6630.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4709.6,
+        "AvgPrice": 4712.1,
         "ClosingPrice": 4734.0,
-        "MTM": -7320.0
+        "MTM": -6570.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4709.8,
+        "AvgPrice": 4712.1,
         "ClosingPrice": 4734.0,
-        "MTM": -7260.0
+        "MTM": -6570.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4710.0,
+        "AvgPrice": 4712.2,
         "ClosingPrice": 4734.0,
-        "MTM": -7200.0
+        "MTM": -6540.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4710.2,
+        "AvgPrice": 4712.3,
         "ClosingPrice": 4734.0,
-        "MTM": -7140.0
+        "MTM": -6510.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4710.5,
+        "AvgPrice": 4712.7,
         "ClosingPrice": 4734.0,
-        "MTM": -7050.0
+        "MTM": -6390.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4710.9,
+        "AvgPrice": 4712.7,
         "ClosingPrice": 4734.0,
-        "MTM": -6930.0
+        "MTM": -6390.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4711.1,
+        "AvgPrice": 4712.8,
         "ClosingPrice": 4734.0,
-        "MTM": -6870.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4711.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -6750.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4711.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -6690.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4712.0,
-        "ClosingPrice": 4734.0,
-        "MTM": -6600.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4713.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -6210.0
+        "MTM": -6360.0
       },
       {
         "Symbol": "GO",
@@ -15425,72 +15335,108 @@
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4716.5,
+        "AvgPrice": 4716.2,
         "ClosingPrice": 4734.0,
-        "MTM": -5250.0
+        "MTM": -5340.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4716.7,
+        "AvgPrice": 4719.4,
         "ClosingPrice": 4734.0,
-        "MTM": -5190.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4716.9,
-        "ClosingPrice": 4734.0,
-        "MTM": -5130.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4717.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -5010.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4717.9,
-        "ClosingPrice": 4734.0,
-        "MTM": -4830.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4718.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -4560.0
+        "MTM": -4380.0
       },
       {
         "Symbol": "SVF",
         "Month": "Jun 26 ",
         "Side": "S",
-        "Qty": 8,
-        "AvgPrice": 87.29,
+        "Qty": 7,
+        "AvgPrice": 87.47,
         "ClosingPrice": 88.03,
-        "MTM": -17760.0
+        "MTM": -11760.0
       },
       {
         "Symbol": "SVF",
         "Month": "Jun 26 ",
         "Side": "S",
-        "Qty": 3,
-        "AvgPrice": 87.3,
+        "Qty": 2,
+        "AvgPrice": 87.47,
         "ClosingPrice": 88.03,
-        "MTM": -6570.0
+        "MTM": -3360.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.47,
+        "ClosingPrice": 88.03,
+        "MTM": -1680.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.53,
+        "ClosingPrice": 88.03,
+        "MTM": -1500.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Sep 26 ",
+        "Side": "S",
+        "Qty": 9,
+        "AvgPrice": 88.8,
+        "ClosingPrice": 89.42,
+        "MTM": -16740.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Sep 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 88.8,
+        "ClosingPrice": 89.42,
+        "MTM": -1860.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Sep 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 88.9,
+        "ClosingPrice": 89.42,
+        "MTM": -1560.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Sep 26 ",
+        "Side": "S",
+        "Qty": 9,
+        "AvgPrice": 88.91,
+        "ClosingPrice": 89.42,
+        "MTM": -13770.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Sep 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 88.92,
+        "ClosingPrice": 89.42,
+        "MTM": -1500.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Sep 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 88.94,
+        "ClosingPrice": 89.42,
+        "MTM": -1440.0
       }
     ]
   },
@@ -17117,6 +17063,3637 @@
         "AvgPrice": 88.94,
         "ClosingPrice": 89.42,
         "MTM": -1440.0
+      }
+    ]
+  },
+  {
+    "account": "XOF8002",
+    "is_master": false,
+    "total_buy_qty": 0,
+    "buy_value": 0.0,
+    "avg_buy": 0.0,
+    "total_sell_qty": 0,
+    "sell_value": 0.0,
+    "avg_sell": 0.0,
+    "net_position": -9,
+    "gross_pl": -473370.0,
+    "num_trades": 0,
+    "volatility": 0.0,
+    "symbols": [
+      "GO",
+      "MGC",
+      "SIC",
+      "SVF"
+    ],
+    "trades": [],
+    "positions": [
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4673.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 122.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4674.2,
+        "ClosingPrice": 4685.3,
+        "MTM": 111.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4674.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 109.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4675.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 102.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4675.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 102.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4675.3,
+        "ClosingPrice": 4685.3,
+        "MTM": 100.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4676.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 88.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 83.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 79.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 78.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.7,
+        "ClosingPrice": 4685.3,
+        "MTM": 76.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 74.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 74.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 74.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 74.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 72.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.2,
+        "ClosingPrice": 4685.3,
+        "MTM": 71.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 69.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 68.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.6,
+        "ClosingPrice": 4685.3,
+        "MTM": 67.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 64.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4679.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 63.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4679.7,
+        "ClosingPrice": 4685.3,
+        "MTM": 56.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4680.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 52.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4680.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 52.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4680.2,
+        "ClosingPrice": 4685.3,
+        "MTM": 51.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4680.6,
+        "ClosingPrice": 4685.3,
+        "MTM": 47.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4680.7,
+        "ClosingPrice": 4685.3,
+        "MTM": 46.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4681.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 43.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4681.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 42.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4682.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 32.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4682.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 24.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4683.3,
+        "ClosingPrice": 4685.3,
+        "MTM": 20.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4683.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 19.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4683.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 19.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4684.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 8.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4684.7,
+        "ClosingPrice": 4685.3,
+        "MTM": 6.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4685.9,
+        "ClosingPrice": 4685.3,
+        "MTM": -6.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4686.5,
+        "ClosingPrice": 4685.3,
+        "MTM": -12.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4686.5,
+        "ClosingPrice": 4685.3,
+        "MTM": -12.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4687.1,
+        "ClosingPrice": 4685.3,
+        "MTM": -18.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4687.5,
+        "ClosingPrice": 4685.3,
+        "MTM": -22.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4687.7,
+        "ClosingPrice": 4685.3,
+        "MTM": -24.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4687.9,
+        "ClosingPrice": 4685.3,
+        "MTM": -26.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4688.5,
+        "ClosingPrice": 4685.3,
+        "MTM": -32.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4688.9,
+        "ClosingPrice": 4685.3,
+        "MTM": -36.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4689.3,
+        "ClosingPrice": 4685.3,
+        "MTM": -40.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4689.8,
+        "ClosingPrice": 4685.3,
+        "MTM": -45.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4690.2,
+        "ClosingPrice": 4685.3,
+        "MTM": -49.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4690.8,
+        "ClosingPrice": 4685.3,
+        "MTM": -55.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4692.3,
+        "ClosingPrice": 4685.3,
+        "MTM": -70.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4693.5,
+        "ClosingPrice": 4685.3,
+        "MTM": -82.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 84.56,
+        "ClosingPrice": 85.33,
+        "MTM": 77.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 85.82,
+        "ClosingPrice": 85.33,
+        "MTM": -49.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 86.14,
+        "ClosingPrice": 85.33,
+        "MTM": -81.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 86.72,
+        "ClosingPrice": 85.33,
+        "MTM": -139.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 86.73,
+        "ClosingPrice": 85.33,
+        "MTM": -140.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 86.75,
+        "ClosingPrice": 85.33,
+        "MTM": -142.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 86.81,
+        "ClosingPrice": 85.33,
+        "MTM": -148.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 86.87,
+        "ClosingPrice": 85.33,
+        "MTM": -154.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 86.99,
+        "ClosingPrice": 85.33,
+        "MTM": -166.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.01,
+        "ClosingPrice": 85.33,
+        "MTM": -168.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.06,
+        "ClosingPrice": 85.33,
+        "MTM": -173.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.07,
+        "ClosingPrice": 85.33,
+        "MTM": -174.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.1,
+        "ClosingPrice": 85.33,
+        "MTM": -177.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.11,
+        "ClosingPrice": 85.33,
+        "MTM": -178.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.12,
+        "ClosingPrice": 85.33,
+        "MTM": -179.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.13,
+        "ClosingPrice": 85.33,
+        "MTM": -180.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.15,
+        "ClosingPrice": 85.33,
+        "MTM": -182.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.15,
+        "ClosingPrice": 85.33,
+        "MTM": -182.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.17,
+        "ClosingPrice": 85.33,
+        "MTM": -184.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.19,
+        "ClosingPrice": 85.33,
+        "MTM": -186.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.2,
+        "ClosingPrice": 85.33,
+        "MTM": -187.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.21,
+        "ClosingPrice": 85.33,
+        "MTM": -188.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.22,
+        "ClosingPrice": 85.33,
+        "MTM": -189.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.25,
+        "ClosingPrice": 85.33,
+        "MTM": -192.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.25,
+        "ClosingPrice": 85.33,
+        "MTM": -192.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.33,
+        "ClosingPrice": 85.33,
+        "MTM": -200.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.39,
+        "ClosingPrice": 85.33,
+        "MTM": -206.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.54,
+        "ClosingPrice": 85.33,
+        "MTM": -221.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.54,
+        "ClosingPrice": 85.33,
+        "MTM": -221.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.55,
+        "ClosingPrice": 85.33,
+        "MTM": -222.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.55,
+        "ClosingPrice": 85.33,
+        "MTM": -222.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.55,
+        "ClosingPrice": 85.33,
+        "MTM": -222.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.55,
+        "ClosingPrice": 85.33,
+        "MTM": -222.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.56,
+        "ClosingPrice": 85.33,
+        "MTM": -223.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.56,
+        "ClosingPrice": 85.33,
+        "MTM": -223.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.56,
+        "ClosingPrice": 85.33,
+        "MTM": -223.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.57,
+        "ClosingPrice": 85.33,
+        "MTM": -224.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.58,
+        "ClosingPrice": 85.33,
+        "MTM": -225.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.58,
+        "ClosingPrice": 85.33,
+        "MTM": -225.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.64,
+        "ClosingPrice": 85.33,
+        "MTM": -231.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.65,
+        "ClosingPrice": 85.33,
+        "MTM": -232.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.66,
+        "ClosingPrice": 85.33,
+        "MTM": -233.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.67,
+        "ClosingPrice": 85.33,
+        "MTM": -234.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.67,
+        "ClosingPrice": 85.33,
+        "MTM": -234.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.68,
+        "ClosingPrice": 85.33,
+        "MTM": -235.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.68,
+        "ClosingPrice": 85.33,
+        "MTM": -235.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.69,
+        "ClosingPrice": 85.33,
+        "MTM": -236.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.71,
+        "ClosingPrice": 85.33,
+        "MTM": -238.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.74,
+        "ClosingPrice": 85.33,
+        "MTM": -241.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.74,
+        "ClosingPrice": 85.33,
+        "MTM": -241.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.81,
+        "ClosingPrice": 85.33,
+        "MTM": -248.0
+      },
+      {
+        "Symbol": "SIC",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.91,
+        "ClosingPrice": 85.33,
+        "MTM": -258.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4701.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -9750.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4702.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -9360.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4703.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -9300.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4703.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -9090.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4704.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -8970.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4704.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -8910.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4705.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -8670.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4705.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -8670.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4705.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -8520.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4705.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -8460.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -8400.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -8370.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -8310.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -8250.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -8250.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -8250.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -8160.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -8160.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.9,
+        "ClosingPrice": 4734.0,
+        "MTM": -8130.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -8070.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -8040.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -8040.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 3,
+        "AvgPrice": 4707.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -23940.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -7980.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -7950.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4708.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -7770.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4708.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -7710.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4709.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -7290.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4711.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -6900.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4711.9,
+        "ClosingPrice": 4734.0,
+        "MTM": -6630.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4712.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -6540.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4713.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -6270.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4713.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -6210.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4714.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -5850.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4714.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -5760.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4715.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -5670.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4715.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -5670.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4715.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -5490.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4716.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -5340.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4716.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -5340.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4716.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -5250.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4717.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -5070.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4717.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -5070.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4717.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -4860.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4717.9,
+        "ClosingPrice": 4734.0,
+        "MTM": -4830.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4718.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -4560.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4718.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -4560.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4719.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -4410.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4720.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -4140.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4720.9,
+        "ClosingPrice": 4734.0,
+        "MTM": -3930.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4722.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -3570.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4727.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -2040.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4727.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -1950.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4728.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -3240.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 84.91,
+        "ClosingPrice": 88.03,
+        "MTM": -9360.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.17,
+        "ClosingPrice": 88.03,
+        "MTM": -5580.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.5,
+        "ClosingPrice": 88.03,
+        "MTM": -4590.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.97,
+        "ClosingPrice": 88.03,
+        "MTM": -3180.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.0,
+        "ClosingPrice": 88.03,
+        "MTM": -3090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.0,
+        "ClosingPrice": 88.03,
+        "MTM": -3090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.0,
+        "ClosingPrice": 88.03,
+        "MTM": -3090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.06,
+        "ClosingPrice": 88.03,
+        "MTM": -2910.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.24,
+        "ClosingPrice": 88.03,
+        "MTM": -2370.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.27,
+        "ClosingPrice": 88.03,
+        "MTM": -2280.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.31,
+        "ClosingPrice": 88.03,
+        "MTM": -2160.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.32,
+        "ClosingPrice": 88.03,
+        "MTM": -2130.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.35,
+        "ClosingPrice": 88.03,
+        "MTM": -2040.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.36,
+        "ClosingPrice": 88.03,
+        "MTM": -2010.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.37,
+        "ClosingPrice": 88.03,
+        "MTM": -1980.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.38,
+        "ClosingPrice": 88.03,
+        "MTM": -1950.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.4,
+        "ClosingPrice": 88.03,
+        "MTM": -1890.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.41,
+        "ClosingPrice": 88.03,
+        "MTM": -1860.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.41,
+        "ClosingPrice": 88.03,
+        "MTM": -1860.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.42,
+        "ClosingPrice": 88.03,
+        "MTM": -1830.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.44,
+        "ClosingPrice": 88.03,
+        "MTM": -1770.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.45,
+        "ClosingPrice": 88.03,
+        "MTM": -1740.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.47,
+        "ClosingPrice": 88.03,
+        "MTM": -1680.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.47,
+        "ClosingPrice": 88.03,
+        "MTM": -1680.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.49,
+        "ClosingPrice": 88.03,
+        "MTM": -1620.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.5,
+        "ClosingPrice": 88.03,
+        "MTM": -1590.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.5,
+        "ClosingPrice": 88.03,
+        "MTM": -1590.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.58,
+        "ClosingPrice": 88.03,
+        "MTM": -1350.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.64,
+        "ClosingPrice": 88.03,
+        "MTM": -1170.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.76,
+        "ClosingPrice": 88.03,
+        "MTM": -810.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.77,
+        "ClosingPrice": 88.03,
+        "MTM": -780.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.79,
+        "ClosingPrice": 88.03,
+        "MTM": -720.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.79,
+        "ClosingPrice": 88.03,
+        "MTM": -720.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.8,
+        "ClosingPrice": 88.03,
+        "MTM": -690.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.8,
+        "ClosingPrice": 88.03,
+        "MTM": -690.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.8,
+        "ClosingPrice": 88.03,
+        "MTM": -690.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.81,
+        "ClosingPrice": 88.03,
+        "MTM": -660.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.81,
+        "ClosingPrice": 88.03,
+        "MTM": -660.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.81,
+        "ClosingPrice": 88.03,
+        "MTM": -660.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.82,
+        "ClosingPrice": 88.03,
+        "MTM": -630.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.83,
+        "ClosingPrice": 88.03,
+        "MTM": -600.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.83,
+        "ClosingPrice": 88.03,
+        "MTM": -600.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.9,
+        "ClosingPrice": 88.03,
+        "MTM": -390.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.9,
+        "ClosingPrice": 88.03,
+        "MTM": -390.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.9,
+        "ClosingPrice": 88.03,
+        "MTM": -390.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.92,
+        "ClosingPrice": 88.03,
+        "MTM": -330.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.92,
+        "ClosingPrice": 88.03,
+        "MTM": -330.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.93,
+        "ClosingPrice": 88.03,
+        "MTM": -300.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.93,
+        "ClosingPrice": 88.03,
+        "MTM": -300.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.94,
+        "ClosingPrice": 88.03,
+        "MTM": -270.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.96,
+        "ClosingPrice": 88.03,
+        "MTM": -210.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.97,
+        "ClosingPrice": 88.03,
+        "MTM": -180.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.99,
+        "ClosingPrice": 88.03,
+        "MTM": -120.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.99,
+        "ClosingPrice": 88.03,
+        "MTM": -120.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 88.06,
+        "ClosingPrice": 88.03,
+        "MTM": 90.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 88.15,
+        "ClosingPrice": 88.03,
+        "MTM": 360.0
+      }
+    ]
+  },
+  {
+    "account": "XOF8008",
+    "is_master": false,
+    "total_buy_qty": 0,
+    "buy_value": 0.0,
+    "avg_buy": 0.0,
+    "total_sell_qty": 0,
+    "sell_value": 0.0,
+    "avg_sell": 0.0,
+    "net_position": -52,
+    "gross_pl": -959693.0,
+    "num_trades": 0,
+    "volatility": 0.0,
+    "symbols": [
+      "GO",
+      "MGC",
+      "SIL",
+      "SVF"
+    ],
+    "trades": [],
+    "positions": [
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4664.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 612.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4665.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 609.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4665.2,
+        "ClosingPrice": 4685.3,
+        "MTM": 603.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4665.3,
+        "ClosingPrice": 4685.3,
+        "MTM": 600.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4665.3,
+        "ClosingPrice": 4685.3,
+        "MTM": 600.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4665.3,
+        "ClosingPrice": 4685.3,
+        "MTM": 600.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4668.6,
+        "ClosingPrice": 4685.3,
+        "MTM": 501.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4668.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 492.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4669.6,
+        "ClosingPrice": 4685.3,
+        "MTM": 471.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4669.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 155.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 2,
+        "AvgPrice": 4669.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 310.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4670.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 153.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 2,
+        "AvgPrice": 4670.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 304.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 2,
+        "AvgPrice": 4673.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 246.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4673.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 123.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4673.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 354.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4674.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 315.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4674.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 312.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4677.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 234.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 3,
+        "AvgPrice": 4678.7,
+        "ClosingPrice": 4685.3,
+        "MTM": 198.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 65.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 65.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 65.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 65.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4679.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 63.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4679.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 62.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4679.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 62.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 2,
+        "AvgPrice": 4679.6,
+        "ClosingPrice": 4685.3,
+        "MTM": 114.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 2,
+        "AvgPrice": 4680.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 98.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4680.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 49.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 2,
+        "AvgPrice": 4680.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 98.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4681.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 39.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4683.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 15.0
+      },
+      {
+        "Symbol": "SIL",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 84.545,
+        "ClosingPrice": 85.328,
+        "MTM": 783.0
+      },
+      {
+        "Symbol": "SIL",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 85.68,
+        "ClosingPrice": 85.328,
+        "MTM": -352.0
+      },
+      {
+        "Symbol": "SIL",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 86.535,
+        "ClosingPrice": 85.328,
+        "MTM": -1207.0
+      },
+      {
+        "Symbol": "SIL",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.155,
+        "ClosingPrice": 85.328,
+        "MTM": -1827.0
+      },
+      {
+        "Symbol": "SIL",
+        "Month": "Jul 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 87.32,
+        "ClosingPrice": 85.328,
+        "MTM": -1992.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4694.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -23940.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4694.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -11940.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4694.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -23760.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4694.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -11880.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4694.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -23760.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 3,
+        "AvgPrice": 4694.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -35550.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4694.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -11850.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4694.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -23700.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4694.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -11850.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 3,
+        "AvgPrice": 4694.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -35550.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4697.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -21720.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4698.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -21600.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4698.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -10800.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4698.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -10770.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4698.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -21300.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4698.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -10650.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4698.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -10590.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4698.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -21180.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 3,
+        "AvgPrice": 4700.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -30600.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -10140.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -10140.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -10110.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -10110.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -10080.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -10080.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -10080.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -10050.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -9990.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.9,
+        "ClosingPrice": 4734.0,
+        "MTM": -9930.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4701.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -9900.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4701.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -19320.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4701.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -9660.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4702.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -9510.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4702.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -9510.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4702.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -9510.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 3,
+        "AvgPrice": 4703.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -27360.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4703.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -18180.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4703.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -9090.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 3,
+        "AvgPrice": 4706.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -24930.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 6,
+        "AvgPrice": 4707.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -48240.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4707.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -16080.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -8040.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 4707.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -16020.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -8010.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 11,
+        "AvgPrice": 84.86,
+        "ClosingPrice": 88.03,
+        "MTM": -104610.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -6090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -12180.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -6090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -6090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -6090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -6090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -6090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -6090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -6090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.0,
+        "ClosingPrice": 88.03,
+        "MTM": -6090.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 3,
+        "AvgPrice": 86.8,
+        "ClosingPrice": 88.03,
+        "MTM": -11070.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 86.8,
+        "ClosingPrice": 88.03,
+        "MTM": -7380.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 86.8,
+        "ClosingPrice": 88.03,
+        "MTM": -7380.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.85,
+        "ClosingPrice": 88.03,
+        "MTM": -3540.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 86.88,
+        "ClosingPrice": 88.03,
+        "MTM": -3450.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 86.89,
+        "ClosingPrice": 88.03,
+        "MTM": -6840.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 87.39,
+        "ClosingPrice": 88.03,
+        "MTM": -3840.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.4,
+        "ClosingPrice": 88.03,
+        "MTM": -1890.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 3,
+        "AvgPrice": 87.4,
+        "ClosingPrice": 88.03,
+        "MTM": -5670.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.4,
+        "ClosingPrice": 88.03,
+        "MTM": -1890.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.4,
+        "ClosingPrice": 88.03,
+        "MTM": -1890.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 2,
+        "AvgPrice": 87.4,
+        "ClosingPrice": 88.03,
+        "MTM": -3780.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 87.4,
+        "ClosingPrice": 88.03,
+        "MTM": -1890.0
+      },
+      {
+        "Symbol": "SVF",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 9,
+        "AvgPrice": 87.49,
+        "ClosingPrice": 88.03,
+        "MTM": -14580.0
+      }
+    ]
+  },
+  {
+    "account": "XOF8005",
+    "is_master": false,
+    "total_buy_qty": 0,
+    "buy_value": 0.0,
+    "avg_buy": 0.0,
+    "total_sell_qty": 0,
+    "sell_value": 0.0,
+    "avg_sell": 0.0,
+    "net_position": -3,
+    "gross_pl": -329691.0,
+    "num_trades": 0,
+    "volatility": 0.0,
+    "symbols": [
+      "GO",
+      "MGC"
+    ],
+    "trades": [],
+    "positions": [
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4664.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 204.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4664.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 204.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4665.2,
+        "ClosingPrice": 4685.3,
+        "MTM": 201.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4665.3,
+        "ClosingPrice": 4685.3,
+        "MTM": 200.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4668.7,
+        "ClosingPrice": 4685.3,
+        "MTM": 166.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4669.6,
+        "ClosingPrice": 4685.3,
+        "MTM": 157.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4670.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 152.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4670.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 144.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4673.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 118.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4675.2,
+        "ClosingPrice": 4685.3,
+        "MTM": 101.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4676.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 88.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4676.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 88.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4676.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 84.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 83.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 83.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.4,
+        "ClosingPrice": 4685.3,
+        "MTM": 79.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 78.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.7,
+        "ClosingPrice": 4685.3,
+        "MTM": 76.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 75.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 74.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4677.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 74.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 72.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 72.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.7,
+        "ClosingPrice": 4685.3,
+        "MTM": 66.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 65.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.8,
+        "ClosingPrice": 4685.3,
+        "MTM": 65.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4678.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 64.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4679.0,
+        "ClosingPrice": 4685.3,
+        "MTM": 63.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4679.5,
+        "ClosingPrice": 4685.3,
+        "MTM": 58.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4681.1,
+        "ClosingPrice": 4685.3,
+        "MTM": 42.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4684.7,
+        "ClosingPrice": 4685.3,
+        "MTM": 6.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4686.5,
+        "ClosingPrice": 4685.3,
+        "MTM": -12.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4686.5,
+        "ClosingPrice": 4685.3,
+        "MTM": -12.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4688.5,
+        "ClosingPrice": 4685.3,
+        "MTM": -32.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4689.7,
+        "ClosingPrice": 4685.3,
+        "MTM": -44.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4690.6,
+        "ClosingPrice": 4685.3,
+        "MTM": -53.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4691.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -12840.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4694.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -11940.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4694.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -11910.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4694.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -11880.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4694.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -11820.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4697.9,
+        "ClosingPrice": 4734.0,
+        "MTM": -10830.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4698.9,
+        "ClosingPrice": 4734.0,
+        "MTM": -10530.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -10200.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4700.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -10110.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4702.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -9510.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4704.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -8910.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4705.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -8670.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4705.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -8610.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4705.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -8550.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4705.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -8520.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4705.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -8520.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -8400.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -8310.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -8310.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.4,
+        "ClosingPrice": 4734.0,
+        "MTM": -8280.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -8250.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -8220.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -8220.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -8190.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4706.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -8190.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -8010.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -7950.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -7920.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.6,
+        "ClosingPrice": 4734.0,
+        "MTM": -7920.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4707.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -7890.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4708.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -7770.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4708.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -7710.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4709.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -7290.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4713.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -6210.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4714.8,
+        "ClosingPrice": 4734.0,
+        "MTM": -5760.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4715.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -5670.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4716.2,
+        "ClosingPrice": 4734.0,
+        "MTM": -5340.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4717.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -5070.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4719.3,
+        "ClosingPrice": 4734.0,
+        "MTM": -4410.0
       }
     ]
   },
@@ -19998,7 +23575,7 @@
     ]
   },
   {
-    "account": "XOF8002",
+    "account": "XOF8020",
     "is_master": false,
     "total_buy_qty": 0,
     "buy_value": 0.0,
@@ -20006,14 +23583,14 @@
     "total_sell_qty": 0,
     "sell_value": 0.0,
     "avg_sell": 0.0,
-    "net_position": -9,
-    "gross_pl": -473370.0,
+    "net_position": -12,
+    "gross_pl": -184470.0,
     "num_trades": 0,
     "volatility": 0.0,
     "symbols": [
       "GO",
       "MGC",
-      "SIC",
+      "SIL",
       "SVF"
     ],
     "trades": [],
@@ -20023,153 +23600,9 @@
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4673.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 122.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4674.2,
-        "ClosingPrice": 4685.3,
-        "MTM": 111.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4674.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 109.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4675.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 102.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4675.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 102.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4675.3,
-        "ClosingPrice": 4685.3,
-        "MTM": 100.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4676.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 88.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 83.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 79.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 78.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.7,
-        "ClosingPrice": 4685.3,
-        "MTM": 76.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
         "AvgPrice": 4677.9,
         "ClosingPrice": 4685.3,
         "MTM": 74.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 74.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 74.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 74.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 72.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.2,
-        "ClosingPrice": 4685.3,
-        "MTM": 71.0
       },
       {
         "Symbol": "MGC",
@@ -20179,24 +23612,6 @@
         "AvgPrice": 4678.4,
         "ClosingPrice": 4685.3,
         "MTM": 69.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 68.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.6,
-        "ClosingPrice": 4685.3,
-        "MTM": 67.0
       },
       {
         "Symbol": "MGC",
@@ -20221,36 +23636,9 @@
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4679.7,
-        "ClosingPrice": 4685.3,
-        "MTM": 56.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
         "AvgPrice": 4680.1,
         "ClosingPrice": 4685.3,
         "MTM": 52.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4680.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 52.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4680.2,
-        "ClosingPrice": 4685.3,
-        "MTM": 51.0
       },
       {
         "Symbol": "MGC",
@@ -20266,27 +23654,27 @@
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4680.7,
+        "AvgPrice": 4680.9,
         "ClosingPrice": 4685.3,
-        "MTM": 46.0
+        "MTM": 44.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4681.0,
+        "AvgPrice": 4681.4,
         "ClosingPrice": 4685.3,
-        "MTM": 43.0
+        "MTM": 39.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4681.1,
+        "AvgPrice": 4681.9,
         "ClosingPrice": 4685.3,
-        "MTM": 42.0
+        "MTM": 34.0
       },
       {
         "Symbol": "MGC",
@@ -20302,18 +23690,27 @@
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4682.9,
+        "AvgPrice": 4682.2,
         "ClosingPrice": 4685.3,
-        "MTM": 24.0
+        "MTM": 31.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4683.3,
+        "AvgPrice": 4682.3,
         "ClosingPrice": 4685.3,
-        "MTM": 20.0
+        "MTM": 30.0
+      },
+      {
+        "Symbol": "MGC",
+        "Month": "Jun 26 ",
+        "Side": "B",
+        "Qty": 1,
+        "AvgPrice": 4682.9,
+        "ClosingPrice": 4685.3,
+        "MTM": 24.0
       },
       {
         "Symbol": "MGC",
@@ -20347,72 +23744,9 @@
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4684.7,
+        "AvgPrice": 4686.8,
         "ClosingPrice": 4685.3,
-        "MTM": 6.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4685.9,
-        "ClosingPrice": 4685.3,
-        "MTM": -6.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4686.5,
-        "ClosingPrice": 4685.3,
-        "MTM": -12.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4686.5,
-        "ClosingPrice": 4685.3,
-        "MTM": -12.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4687.1,
-        "ClosingPrice": 4685.3,
-        "MTM": -18.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4687.5,
-        "ClosingPrice": 4685.3,
-        "MTM": -22.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4687.7,
-        "ClosingPrice": 4685.3,
-        "MTM": -24.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4687.9,
-        "ClosingPrice": 4685.3,
-        "MTM": -26.0
+        "MTM": -15.0
       },
       {
         "Symbol": "MGC",
@@ -20428,9 +23762,9 @@
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4688.9,
+        "AvgPrice": 4689.0,
         "ClosingPrice": 4685.3,
-        "MTM": -36.0
+        "MTM": -37.0
       },
       {
         "Symbol": "MGC",
@@ -20446,630 +23780,27 @@
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4689.8,
+        "AvgPrice": 4691.3,
         "ClosingPrice": 4685.3,
-        "MTM": -45.0
+        "MTM": -60.0
       },
       {
         "Symbol": "MGC",
         "Month": "Jun 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 4690.2,
+        "AvgPrice": 4693.1,
         "ClosingPrice": 4685.3,
-        "MTM": -49.0
+        "MTM": -78.0
       },
       {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4690.8,
-        "ClosingPrice": 4685.3,
-        "MTM": -55.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4692.3,
-        "ClosingPrice": 4685.3,
-        "MTM": -70.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4693.5,
-        "ClosingPrice": 4685.3,
-        "MTM": -82.0
-      },
-      {
-        "Symbol": "SIC",
+        "Symbol": "SIL",
         "Month": "Jul 26 ",
         "Side": "B",
         "Qty": 1,
-        "AvgPrice": 84.56,
-        "ClosingPrice": 85.33,
-        "MTM": 77.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 85.82,
-        "ClosingPrice": 85.33,
-        "MTM": -49.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 86.14,
-        "ClosingPrice": 85.33,
-        "MTM": -81.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 86.72,
-        "ClosingPrice": 85.33,
-        "MTM": -139.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 86.73,
-        "ClosingPrice": 85.33,
-        "MTM": -140.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 86.75,
-        "ClosingPrice": 85.33,
-        "MTM": -142.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 86.81,
-        "ClosingPrice": 85.33,
-        "MTM": -148.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 86.87,
-        "ClosingPrice": 85.33,
-        "MTM": -154.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 86.99,
-        "ClosingPrice": 85.33,
-        "MTM": -166.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.01,
-        "ClosingPrice": 85.33,
-        "MTM": -168.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.06,
-        "ClosingPrice": 85.33,
-        "MTM": -173.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.07,
-        "ClosingPrice": 85.33,
-        "MTM": -174.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.1,
-        "ClosingPrice": 85.33,
-        "MTM": -177.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.11,
-        "ClosingPrice": 85.33,
-        "MTM": -178.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.12,
-        "ClosingPrice": 85.33,
-        "MTM": -179.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.13,
-        "ClosingPrice": 85.33,
-        "MTM": -180.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.15,
-        "ClosingPrice": 85.33,
-        "MTM": -182.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.15,
-        "ClosingPrice": 85.33,
-        "MTM": -182.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.17,
-        "ClosingPrice": 85.33,
-        "MTM": -184.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.19,
-        "ClosingPrice": 85.33,
-        "MTM": -186.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.2,
-        "ClosingPrice": 85.33,
-        "MTM": -187.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.21,
-        "ClosingPrice": 85.33,
-        "MTM": -188.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.22,
-        "ClosingPrice": 85.33,
-        "MTM": -189.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.25,
-        "ClosingPrice": 85.33,
-        "MTM": -192.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.25,
-        "ClosingPrice": 85.33,
-        "MTM": -192.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.33,
-        "ClosingPrice": 85.33,
-        "MTM": -200.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.39,
-        "ClosingPrice": 85.33,
-        "MTM": -206.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.54,
-        "ClosingPrice": 85.33,
-        "MTM": -221.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.54,
-        "ClosingPrice": 85.33,
-        "MTM": -221.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.55,
-        "ClosingPrice": 85.33,
-        "MTM": -222.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.55,
-        "ClosingPrice": 85.33,
-        "MTM": -222.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.55,
-        "ClosingPrice": 85.33,
-        "MTM": -222.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.55,
-        "ClosingPrice": 85.33,
-        "MTM": -222.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.56,
-        "ClosingPrice": 85.33,
-        "MTM": -223.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.56,
-        "ClosingPrice": 85.33,
-        "MTM": -223.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.56,
-        "ClosingPrice": 85.33,
-        "MTM": -223.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.57,
-        "ClosingPrice": 85.33,
-        "MTM": -224.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.58,
-        "ClosingPrice": 85.33,
-        "MTM": -225.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.58,
-        "ClosingPrice": 85.33,
-        "MTM": -225.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.64,
-        "ClosingPrice": 85.33,
-        "MTM": -231.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.65,
-        "ClosingPrice": 85.33,
-        "MTM": -232.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.66,
-        "ClosingPrice": 85.33,
-        "MTM": -233.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.67,
-        "ClosingPrice": 85.33,
-        "MTM": -234.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.67,
-        "ClosingPrice": 85.33,
-        "MTM": -234.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.68,
-        "ClosingPrice": 85.33,
-        "MTM": -235.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.68,
-        "ClosingPrice": 85.33,
-        "MTM": -235.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.69,
-        "ClosingPrice": 85.33,
-        "MTM": -236.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.71,
-        "ClosingPrice": 85.33,
-        "MTM": -238.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.74,
-        "ClosingPrice": 85.33,
-        "MTM": -241.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.74,
-        "ClosingPrice": 85.33,
-        "MTM": -241.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.81,
-        "ClosingPrice": 85.33,
-        "MTM": -248.0
-      },
-      {
-        "Symbol": "SIC",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.91,
-        "ClosingPrice": 85.33,
-        "MTM": -258.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4701.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -9750.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4702.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -9360.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4703.0,
-        "ClosingPrice": 4734.0,
-        "MTM": -9300.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4703.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -9090.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4704.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -8970.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4704.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -8910.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -8670.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -8670.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -8520.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -8460.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.0,
-        "ClosingPrice": 4734.0,
-        "MTM": -8400.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -8370.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -8310.0
+        "AvgPrice": 87.095,
+        "ClosingPrice": 85.328,
+        "MTM": -1767.0
       },
       {
         "Symbol": "GO",
@@ -21085,90 +23816,18 @@
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4706.5,
+        "AvgPrice": 4707.0,
         "ClosingPrice": 4734.0,
-        "MTM": -8250.0
+        "MTM": -8100.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4706.5,
+        "AvgPrice": 4707.3,
         "ClosingPrice": 4734.0,
-        "MTM": -8250.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -8160.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -8160.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.9,
-        "ClosingPrice": 4734.0,
-        "MTM": -8130.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -8070.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -8040.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -8040.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 3,
-        "AvgPrice": 4707.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -23940.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -7980.0
+        "MTM": -8010.0
       },
       {
         "Symbol": "GO",
@@ -21184,63 +23843,108 @@
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4708.1,
+        "AvgPrice": 4709.1,
         "ClosingPrice": 4734.0,
-        "MTM": -7770.0
+        "MTM": -7470.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4708.3,
+        "AvgPrice": 4709.3,
         "ClosingPrice": 4734.0,
-        "MTM": -7710.0
+        "MTM": -7410.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4709.7,
+        "AvgPrice": 4709.6,
         "ClosingPrice": 4734.0,
-        "MTM": -7290.0
+        "MTM": -7320.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4711.0,
+        "AvgPrice": 4709.8,
         "ClosingPrice": 4734.0,
-        "MTM": -6900.0
+        "MTM": -7260.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4711.9,
+        "AvgPrice": 4710.0,
         "ClosingPrice": 4734.0,
-        "MTM": -6630.0
+        "MTM": -7200.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4712.2,
+        "AvgPrice": 4710.2,
         "ClosingPrice": 4734.0,
-        "MTM": -6540.0
+        "MTM": -7140.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4713.1,
+        "AvgPrice": 4710.5,
         "ClosingPrice": 4734.0,
-        "MTM": -6270.0
+        "MTM": -7050.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4710.9,
+        "ClosingPrice": 4734.0,
+        "MTM": -6930.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4711.1,
+        "ClosingPrice": 4734.0,
+        "MTM": -6870.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4711.5,
+        "ClosingPrice": 4734.0,
+        "MTM": -6750.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4711.7,
+        "ClosingPrice": 4734.0,
+        "MTM": -6690.0
+      },
+      {
+        "Symbol": "GO",
+        "Month": "Jun 26 ",
+        "Side": "S",
+        "Qty": 1,
+        "AvgPrice": 4712.0,
+        "ClosingPrice": 4734.0,
+        "MTM": -6600.0
       },
       {
         "Symbol": "GO",
@@ -21256,63 +23960,9 @@
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4714.5,
+        "AvgPrice": 4715.4,
         "ClosingPrice": 4734.0,
-        "MTM": -5850.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4714.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -5760.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4715.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -5670.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4715.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -5670.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4715.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -5490.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4716.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -5340.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4716.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -5340.0
+        "MTM": -5580.0
       },
       {
         "Symbol": "GO",
@@ -21328,27 +23978,27 @@
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4717.1,
+        "AvgPrice": 4716.7,
         "ClosingPrice": 4734.0,
-        "MTM": -5070.0
+        "MTM": -5190.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4717.1,
+        "AvgPrice": 4716.9,
         "ClosingPrice": 4734.0,
-        "MTM": -5070.0
+        "MTM": -5130.0
       },
       {
         "Symbol": "GO",
         "Month": "Jun 26 ",
         "Side": "S",
         "Qty": 1,
-        "AvgPrice": 4717.8,
+        "AvgPrice": 4717.3,
         "ClosingPrice": 4734.0,
-        "MTM": -4860.0
+        "MTM": -5010.0
       },
       {
         "Symbol": "GO",
@@ -21369,2672 +24019,22 @@
         "MTM": -4560.0
       },
       {
-        "Symbol": "GO",
+        "Symbol": "SVF",
         "Month": "Jun 26 ",
         "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4718.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -4560.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4719.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -4410.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4720.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -4140.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4720.9,
-        "ClosingPrice": 4734.0,
-        "MTM": -3930.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4722.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -3570.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4727.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -2040.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4727.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -1950.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4728.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -3240.0
+        "Qty": 8,
+        "AvgPrice": 87.29,
+        "ClosingPrice": 88.03,
+        "MTM": -17760.0
       },
       {
         "Symbol": "SVF",
         "Month": "Jun 26 ",
         "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 84.91,
-        "ClosingPrice": 88.03,
-        "MTM": -9360.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.17,
-        "ClosingPrice": 88.03,
-        "MTM": -5580.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.5,
-        "ClosingPrice": 88.03,
-        "MTM": -4590.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.97,
-        "ClosingPrice": 88.03,
-        "MTM": -3180.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.0,
-        "ClosingPrice": 88.03,
-        "MTM": -3090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.0,
-        "ClosingPrice": 88.03,
-        "MTM": -3090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.0,
-        "ClosingPrice": 88.03,
-        "MTM": -3090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.06,
-        "ClosingPrice": 88.03,
-        "MTM": -2910.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.24,
-        "ClosingPrice": 88.03,
-        "MTM": -2370.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.27,
-        "ClosingPrice": 88.03,
-        "MTM": -2280.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.31,
-        "ClosingPrice": 88.03,
-        "MTM": -2160.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.32,
-        "ClosingPrice": 88.03,
-        "MTM": -2130.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.35,
-        "ClosingPrice": 88.03,
-        "MTM": -2040.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.36,
-        "ClosingPrice": 88.03,
-        "MTM": -2010.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.37,
-        "ClosingPrice": 88.03,
-        "MTM": -1980.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.38,
-        "ClosingPrice": 88.03,
-        "MTM": -1950.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.4,
-        "ClosingPrice": 88.03,
-        "MTM": -1890.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.41,
-        "ClosingPrice": 88.03,
-        "MTM": -1860.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.41,
-        "ClosingPrice": 88.03,
-        "MTM": -1860.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.42,
-        "ClosingPrice": 88.03,
-        "MTM": -1830.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.44,
-        "ClosingPrice": 88.03,
-        "MTM": -1770.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.45,
-        "ClosingPrice": 88.03,
-        "MTM": -1740.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.47,
-        "ClosingPrice": 88.03,
-        "MTM": -1680.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.47,
-        "ClosingPrice": 88.03,
-        "MTM": -1680.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.49,
-        "ClosingPrice": 88.03,
-        "MTM": -1620.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.5,
-        "ClosingPrice": 88.03,
-        "MTM": -1590.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.5,
-        "ClosingPrice": 88.03,
-        "MTM": -1590.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.58,
-        "ClosingPrice": 88.03,
-        "MTM": -1350.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.64,
-        "ClosingPrice": 88.03,
-        "MTM": -1170.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.76,
-        "ClosingPrice": 88.03,
-        "MTM": -810.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.77,
-        "ClosingPrice": 88.03,
-        "MTM": -780.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.79,
-        "ClosingPrice": 88.03,
-        "MTM": -720.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.79,
-        "ClosingPrice": 88.03,
-        "MTM": -720.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.8,
-        "ClosingPrice": 88.03,
-        "MTM": -690.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.8,
-        "ClosingPrice": 88.03,
-        "MTM": -690.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.8,
-        "ClosingPrice": 88.03,
-        "MTM": -690.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.81,
-        "ClosingPrice": 88.03,
-        "MTM": -660.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.81,
-        "ClosingPrice": 88.03,
-        "MTM": -660.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.81,
-        "ClosingPrice": 88.03,
-        "MTM": -660.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.82,
-        "ClosingPrice": 88.03,
-        "MTM": -630.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.83,
-        "ClosingPrice": 88.03,
-        "MTM": -600.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.83,
-        "ClosingPrice": 88.03,
-        "MTM": -600.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.9,
-        "ClosingPrice": 88.03,
-        "MTM": -390.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.9,
-        "ClosingPrice": 88.03,
-        "MTM": -390.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.9,
-        "ClosingPrice": 88.03,
-        "MTM": -390.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.92,
-        "ClosingPrice": 88.03,
-        "MTM": -330.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.92,
-        "ClosingPrice": 88.03,
-        "MTM": -330.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.93,
-        "ClosingPrice": 88.03,
-        "MTM": -300.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.93,
-        "ClosingPrice": 88.03,
-        "MTM": -300.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.94,
-        "ClosingPrice": 88.03,
-        "MTM": -270.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.96,
-        "ClosingPrice": 88.03,
-        "MTM": -210.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.97,
-        "ClosingPrice": 88.03,
-        "MTM": -180.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.99,
-        "ClosingPrice": 88.03,
-        "MTM": -120.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.99,
-        "ClosingPrice": 88.03,
-        "MTM": -120.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 88.06,
-        "ClosingPrice": 88.03,
-        "MTM": 90.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 88.15,
-        "ClosingPrice": 88.03,
-        "MTM": 360.0
-      }
-    ]
-  },
-  {
-    "account": "XOF8005",
-    "is_master": false,
-    "total_buy_qty": 0,
-    "buy_value": 0.0,
-    "avg_buy": 0.0,
-    "total_sell_qty": 0,
-    "sell_value": 0.0,
-    "avg_sell": 0.0,
-    "net_position": -3,
-    "gross_pl": -329691.0,
-    "num_trades": 0,
-    "volatility": 0.0,
-    "symbols": [
-      "GO",
-      "MGC"
-    ],
-    "trades": [],
-    "positions": [
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4664.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 204.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4664.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 204.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4665.2,
-        "ClosingPrice": 4685.3,
-        "MTM": 201.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4665.3,
-        "ClosingPrice": 4685.3,
-        "MTM": 200.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4668.7,
-        "ClosingPrice": 4685.3,
-        "MTM": 166.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4669.6,
-        "ClosingPrice": 4685.3,
-        "MTM": 157.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4670.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 152.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4670.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 144.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4673.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 118.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4675.2,
-        "ClosingPrice": 4685.3,
-        "MTM": 101.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4676.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 88.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4676.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 88.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4676.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 84.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 83.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 83.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 79.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 78.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.7,
-        "ClosingPrice": 4685.3,
-        "MTM": 76.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 75.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 74.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 74.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 72.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 72.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.7,
-        "ClosingPrice": 4685.3,
-        "MTM": 66.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 65.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 65.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 64.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4679.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 63.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4679.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 58.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4681.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 42.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4684.7,
-        "ClosingPrice": 4685.3,
-        "MTM": 6.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4686.5,
-        "ClosingPrice": 4685.3,
-        "MTM": -12.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4686.5,
-        "ClosingPrice": 4685.3,
-        "MTM": -12.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4688.5,
-        "ClosingPrice": 4685.3,
-        "MTM": -32.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4689.7,
-        "ClosingPrice": 4685.3,
-        "MTM": -44.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4690.6,
-        "ClosingPrice": 4685.3,
-        "MTM": -53.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4691.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -12840.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4694.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -11940.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4694.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -11910.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4694.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -11880.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4694.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -11820.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4697.9,
-        "ClosingPrice": 4734.0,
-        "MTM": -10830.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4698.9,
-        "ClosingPrice": 4734.0,
-        "MTM": -10530.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.0,
-        "ClosingPrice": 4734.0,
-        "MTM": -10200.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -10110.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4702.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -9510.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4704.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -8910.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -8670.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -8610.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -8550.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -8520.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -8520.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.0,
-        "ClosingPrice": 4734.0,
-        "MTM": -8400.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -8310.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -8310.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -8280.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -8250.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -8220.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -8220.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -8190.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -8190.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -8010.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -7950.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -7920.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -7920.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -7890.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4708.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -7770.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4708.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -7710.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4709.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -7290.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4713.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -6210.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4714.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -5760.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4715.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -5670.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4716.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -5340.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4717.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -5070.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4719.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -4410.0
-      }
-    ]
-  },
-  {
-    "account": "XOF8001",
-    "is_master": false,
-    "total_buy_qty": 0,
-    "buy_value": 0.0,
-    "avg_buy": 0.0,
-    "total_sell_qty": 0,
-    "sell_value": 0.0,
-    "avg_sell": 0.0,
-    "net_position": -32,
-    "gross_pl": -167600.0,
-    "num_trades": 0,
-    "volatility": 0.0,
-    "symbols": [
-      "GO",
-      "MGC",
-      "SIL",
-      "SVF"
-    ],
-    "trades": [],
-    "positions": [
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 83.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4677.7,
-        "ClosingPrice": 4685.3,
-        "MTM": 76.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4681.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 42.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4683.6,
-        "ClosingPrice": 4685.3,
-        "MTM": 17.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4683.6,
-        "ClosingPrice": 4685.3,
-        "MTM": 17.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4683.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 15.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4683.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 15.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4684.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 13.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4684.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 9.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4684.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 9.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4684.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 9.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4687.1,
-        "ClosingPrice": 4685.3,
-        "MTM": -18.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4687.6,
-        "ClosingPrice": 4685.3,
-        "MTM": -23.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4689.1,
-        "ClosingPrice": 4685.3,
-        "MTM": -38.0
-      },
-      {
-        "Symbol": "SIL",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.28,
-        "ClosingPrice": 85.328,
-        "MTM": -1952.0
-      },
-      {
-        "Symbol": "SIL",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
+        "Qty": 3,
         "AvgPrice": 87.3,
-        "ClosingPrice": 85.328,
-        "MTM": -1972.0
-      },
-      {
-        "Symbol": "SIL",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.38,
-        "ClosingPrice": 85.328,
-        "MTM": -2052.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -8670.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4705.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -8520.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4706.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -8310.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4709.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -7290.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4711.9,
-        "ClosingPrice": 4734.0,
-        "MTM": -6630.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4711.9,
-        "ClosingPrice": 4734.0,
-        "MTM": -6630.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4712.1,
-        "ClosingPrice": 4734.0,
+        "ClosingPrice": 88.03,
         "MTM": -6570.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4712.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -6570.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4712.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -6540.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4712.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -6510.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4712.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -6390.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4712.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -6390.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4712.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -6360.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4715.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -5580.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4716.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -5340.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4719.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -4380.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 7,
-        "AvgPrice": 87.47,
-        "ClosingPrice": 88.03,
-        "MTM": -11760.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 87.47,
-        "ClosingPrice": 88.03,
-        "MTM": -3360.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.47,
-        "ClosingPrice": 88.03,
-        "MTM": -1680.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.53,
-        "ClosingPrice": 88.03,
-        "MTM": -1500.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Sep 26 ",
-        "Side": "S",
-        "Qty": 9,
-        "AvgPrice": 88.8,
-        "ClosingPrice": 89.42,
-        "MTM": -16740.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Sep 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 88.8,
-        "ClosingPrice": 89.42,
-        "MTM": -1860.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Sep 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 88.9,
-        "ClosingPrice": 89.42,
-        "MTM": -1560.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Sep 26 ",
-        "Side": "S",
-        "Qty": 9,
-        "AvgPrice": 88.91,
-        "ClosingPrice": 89.42,
-        "MTM": -13770.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Sep 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 88.92,
-        "ClosingPrice": 89.42,
-        "MTM": -1500.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Sep 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 88.94,
-        "ClosingPrice": 89.42,
-        "MTM": -1440.0
-      }
-    ]
-  },
-  {
-    "account": "XOF8008",
-    "is_master": false,
-    "total_buy_qty": 0,
-    "buy_value": 0.0,
-    "avg_buy": 0.0,
-    "total_sell_qty": 0,
-    "sell_value": 0.0,
-    "avg_sell": 0.0,
-    "net_position": -52,
-    "gross_pl": -959693.0,
-    "num_trades": 0,
-    "volatility": 0.0,
-    "symbols": [
-      "GO",
-      "MGC",
-      "SIL",
-      "SVF"
-    ],
-    "trades": [],
-    "positions": [
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4664.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 612.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4665.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 609.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4665.2,
-        "ClosingPrice": 4685.3,
-        "MTM": 603.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4665.3,
-        "ClosingPrice": 4685.3,
-        "MTM": 600.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4665.3,
-        "ClosingPrice": 4685.3,
-        "MTM": 600.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4665.3,
-        "ClosingPrice": 4685.3,
-        "MTM": 600.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4668.6,
-        "ClosingPrice": 4685.3,
-        "MTM": 501.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4668.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 492.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4669.6,
-        "ClosingPrice": 4685.3,
-        "MTM": 471.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4669.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 155.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 2,
-        "AvgPrice": 4669.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 310.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4670.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 153.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 2,
-        "AvgPrice": 4670.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 304.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 2,
-        "AvgPrice": 4673.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 246.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4673.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 123.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4673.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 354.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4674.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 315.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4674.9,
-        "ClosingPrice": 4685.3,
-        "MTM": 312.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4677.5,
-        "ClosingPrice": 4685.3,
-        "MTM": 234.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 3,
-        "AvgPrice": 4678.7,
-        "ClosingPrice": 4685.3,
-        "MTM": 198.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 65.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 65.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 65.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4678.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 65.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4679.0,
-        "ClosingPrice": 4685.3,
-        "MTM": 63.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4679.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 62.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4679.1,
-        "ClosingPrice": 4685.3,
-        "MTM": 62.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 2,
-        "AvgPrice": 4679.6,
-        "ClosingPrice": 4685.3,
-        "MTM": 114.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 2,
-        "AvgPrice": 4680.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 98.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4680.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 49.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 2,
-        "AvgPrice": 4680.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 98.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4681.4,
-        "ClosingPrice": 4685.3,
-        "MTM": 39.0
-      },
-      {
-        "Symbol": "MGC",
-        "Month": "Jun 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 4683.8,
-        "ClosingPrice": 4685.3,
-        "MTM": 15.0
-      },
-      {
-        "Symbol": "SIL",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 84.545,
-        "ClosingPrice": 85.328,
-        "MTM": 783.0
-      },
-      {
-        "Symbol": "SIL",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 85.68,
-        "ClosingPrice": 85.328,
-        "MTM": -352.0
-      },
-      {
-        "Symbol": "SIL",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 86.535,
-        "ClosingPrice": 85.328,
-        "MTM": -1207.0
-      },
-      {
-        "Symbol": "SIL",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.155,
-        "ClosingPrice": 85.328,
-        "MTM": -1827.0
-      },
-      {
-        "Symbol": "SIL",
-        "Month": "Jul 26 ",
-        "Side": "B",
-        "Qty": 1,
-        "AvgPrice": 87.32,
-        "ClosingPrice": 85.328,
-        "MTM": -1992.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4694.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -23940.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4694.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -11940.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4694.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -23760.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4694.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -11880.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4694.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -23760.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 3,
-        "AvgPrice": 4694.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -35550.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4694.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -11850.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4694.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -23700.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4694.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -11850.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 3,
-        "AvgPrice": 4694.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -35550.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4697.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -21720.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4698.0,
-        "ClosingPrice": 4734.0,
-        "MTM": -21600.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4698.0,
-        "ClosingPrice": 4734.0,
-        "MTM": -10800.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4698.1,
-        "ClosingPrice": 4734.0,
-        "MTM": -10770.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4698.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -21300.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4698.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -10650.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4698.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -10590.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4698.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -21180.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 3,
-        "AvgPrice": 4700.0,
-        "ClosingPrice": 4734.0,
-        "MTM": -30600.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -10140.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -10140.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -10110.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -10110.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -10080.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -10080.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.4,
-        "ClosingPrice": 4734.0,
-        "MTM": -10080.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.5,
-        "ClosingPrice": 4734.0,
-        "MTM": -10050.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -9990.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4700.9,
-        "ClosingPrice": 4734.0,
-        "MTM": -9930.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4701.0,
-        "ClosingPrice": 4734.0,
-        "MTM": -9900.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4701.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -19320.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4701.8,
-        "ClosingPrice": 4734.0,
-        "MTM": -9660.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4702.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -9510.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4702.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -9510.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4702.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -9510.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 3,
-        "AvgPrice": 4703.6,
-        "ClosingPrice": 4734.0,
-        "MTM": -27360.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4703.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -18180.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4703.7,
-        "ClosingPrice": 4734.0,
-        "MTM": -9090.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 3,
-        "AvgPrice": 4706.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -24930.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 6,
-        "AvgPrice": 4707.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -48240.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4707.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -16080.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.2,
-        "ClosingPrice": 4734.0,
-        "MTM": -8040.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 4707.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -16020.0
-      },
-      {
-        "Symbol": "GO",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 4707.3,
-        "ClosingPrice": 4734.0,
-        "MTM": -8010.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 11,
-        "AvgPrice": 84.86,
-        "ClosingPrice": 88.03,
-        "MTM": -104610.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -6090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -12180.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -6090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -6090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -6090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -6090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -6090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -6090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -6090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.0,
-        "ClosingPrice": 88.03,
-        "MTM": -6090.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 3,
-        "AvgPrice": 86.8,
-        "ClosingPrice": 88.03,
-        "MTM": -11070.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 86.8,
-        "ClosingPrice": 88.03,
-        "MTM": -7380.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 86.8,
-        "ClosingPrice": 88.03,
-        "MTM": -7380.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.85,
-        "ClosingPrice": 88.03,
-        "MTM": -3540.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 86.88,
-        "ClosingPrice": 88.03,
-        "MTM": -3450.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 86.89,
-        "ClosingPrice": 88.03,
-        "MTM": -6840.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 87.39,
-        "ClosingPrice": 88.03,
-        "MTM": -3840.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.4,
-        "ClosingPrice": 88.03,
-        "MTM": -1890.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 3,
-        "AvgPrice": 87.4,
-        "ClosingPrice": 88.03,
-        "MTM": -5670.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.4,
-        "ClosingPrice": 88.03,
-        "MTM": -1890.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.4,
-        "ClosingPrice": 88.03,
-        "MTM": -1890.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 2,
-        "AvgPrice": 87.4,
-        "ClosingPrice": 88.03,
-        "MTM": -3780.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 1,
-        "AvgPrice": 87.4,
-        "ClosingPrice": 88.03,
-        "MTM": -1890.0
-      },
-      {
-        "Symbol": "SVF",
-        "Month": "Jun 26 ",
-        "Side": "S",
-        "Qty": 9,
-        "AvgPrice": 87.49,
-        "ClosingPrice": 88.03,
-        "MTM": -14580.0
       }
     ]
   }
