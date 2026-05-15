@@ -14,7 +14,13 @@ def process_trading_data():
         'TradeID', 'Qty', 'Price', 'Unknown3', 'Symbol', 'Side', 
         'Date', 'Time', 'ExecPrice', 'Exchange', 'Account', 'Account2', 'Symbol2'
     ]
-    df_trades['Account'] = df_trades['Account'].astype(str).str.strip()
+    def clean_acc(acc):
+        acc = str(acc).strip()
+        if 'XOF' in acc:
+            return acc[acc.find('XOF'):]
+        return acc
+
+    df_trades['Account'] = df_trades['Account'].apply(clean_acc)
     df_trades['Value'] = df_trades['Price'] * df_trades['Qty']
 
     # 2. Load PHILLIP_Open_Position_XOF9000_20260514.csv (Positions)
@@ -27,7 +33,7 @@ def process_trading_data():
 
     # Clean Client_No in positions
     if not df_positions.empty:
-        df_positions['Client_No'] = df_positions['Client_No'].astype(str).str.strip()
+        df_positions['Client_No'] = df_positions['Client_No'].apply(clean_acc)
         df_positions['Unrealised_pl_value'] = pd.to_numeric(df_positions['Unrealised_pl_value'], errors='coerce').fillna(0)
         df_positions['Traded_Qty'] = pd.to_numeric(df_positions['Traded_Qty'], errors='coerce').fillna(0)
         df_positions['Traded_Price'] = pd.to_numeric(df_positions['Traded_Price'], errors='coerce').fillna(0)
