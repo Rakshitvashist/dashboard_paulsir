@@ -274,6 +274,58 @@
             font-size: 0.85rem;
             text-align: center;
         }
+
+        .list-header {
+            background: var(--header-bg);
+            color: #94a3b8;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem 0.5rem 0 0;
+            display: grid;
+            grid-template-columns: 150px 120px 120px 150px 150px 150px 150px 1fr 40px;
+            align-items: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .symbol-summary {
+            margin-bottom: 2rem;
+        }
+        
+        .symbol-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .symbol-card {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        }
+        
+        .symbol-card-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .symbol-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+        }
+        
+        .stat-group { display: flex; flex-direction: column; }
+        .stat-label { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; }
+        .stat-value { font-weight: 700; }
     </style>
 </head>
 
@@ -293,6 +345,7 @@
     <div class="container">
         <div id="errorDebugger" class="error-debugger"></div>
         <div id="globalSummary" class="summary-grid"></div>
+        <div id="symbolSummary" class="symbol-summary"></div>
         <div class="controls">
             <input type="text" class="search-input" id="searchBox" placeholder="Search by Account ID, Symbol or Side..." oninput="filterData()">
             <select class="select-input" id="posSelect" onchange="filterData()">
@@ -309,7 +362,18 @@
                 <option value="id">Account ID</option>
             </select>
         </div>
-        <div id="traderList" class="trader-list"></div>
+        <div class="list-header">
+            <div>Account</div>
+            <div>Net Position</div>
+            <div>Volume</div>
+            <div>Buy Value</div>
+            <div>Sell Value</div>
+            <div>Avg B / S</div>
+            <div>MTM (P&L)</div>
+            <div>Top Symbols</div>
+            <div></div>
+        </div>
+        <div id="traderList" class="trader-list" style="gap: 0;"></div>
     </div>
 
     <script>
@@ -352,16 +416,21 @@
             const totalBuyVal = allData.reduce((s, t) => s + t.buy_value, 0);
             const totalSellVal = allData.reduce((s, t) => s + t.sell_value, 0);
             const totalTrades = allData.reduce((s, t) => s + t.num_trades, 0);
-            const totalLots = allData.reduce((s, t) => s + t.total_buy_qty + t.total_sell_qty, 0);
+
+            // Aggregate Symbol Wise Qty
+            const symMap = {};
+            allData.forEach(trader => {
+                trader.trades.forEach(t => {
+                    if (!symMap[t.Symbol]) symMap[t.Symbol] = { buy: 0, sell: 0 };
+                    if (t.Side === 'B') symMap[t.Symbol].buy += t.Qty;
+                    else if (t.Side === 'S') symMap[t.Symbol].sell += t.Qty;
+                });
+            });
 
             document.getElementById('globalSummary').innerHTML = `
                 <div class="summary-card">
                     <div class="summary-label">Aggregate Gross P&L (MTM)</div>
                     <div class="summary-value ${totalPL >= 0 ? 'val-pos' : 'val-neg'}">$${formatNum(totalPL)}</div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-label">Total Session Volume</div>
-                    <div class="summary-value">${totalLots.toLocaleString()}</div>
                 </div>
                 <div class="summary-card">
                     <div class="summary-label">Total Purchase Value</div>
@@ -376,50 +445,60 @@
                     <div class="summary-value">${totalTrades.toLocaleString()}</div>
                 </div>
             `;
+
+            // Render Symbol Summary
+            const symHtml = Object.keys(symMap).sort().map(sym => `
+                <div class="symbol-card">
+                    <div class="symbol-card-title">${sym}</div>
+                    <div class="symbol-stats">
+                        <div class="stat-group">
+                            <span class="stat-label">Buy Qty</span>
+                            <span class="stat-value val-buy">${symMap[sym].buy.toLocaleString()}</span>
+                        </div>
+                        <div class="stat-group">
+                            <span class="stat-label">Sell Qty</span>
+                            <span class="stat-value val-sell">${symMap[sym].sell.toLocaleString()}</span>
+                        </div>
+                        <div class="stat-group">
+                            <span class="stat-label">Net Qty</span>
+                            <span class="stat-value ${symMap[sym].buy - symMap[sym].sell >= 0 ? 'val-pos' : 'val-neg'}">
+                                ${symMap[sym].buy - symMap[sym].sell}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            document.getElementById('symbolSummary').innerHTML = `
+                <div class="summary-label" style="margin-bottom: 1rem;">Contract Wise Volume</div>
+                <div class="symbol-grid">${symHtml || '<div style="color:var(--text-muted)">No trade data available.</div>'}</div>
+            `;
         }
 
         function renderTraders() {
             const container = document.getElementById('traderList');
             container.innerHTML = filteredData.map((trader, idx) => `
-                <div class="trader-row ${trader.is_master ? 'master' : ''}" id="trader-${idx}">
+                <div class="trader-row ${trader.is_master ? 'master' : ''}" style="border-radius: 0; border-top: none;" id="trader-${idx}">
                     <div class="row-header" onclick="toggleRow(${idx})">
                         <div class="acc-id">
                             ${trader.account}${trader.is_master ? '<span class="master-tag">MASTER</span>' : ''}
                         </div>
-                        <div>
-                            <div class="cell-label">Net Position</div>
-                            <div class="cell-value">
-                                <span class="badge ${trader.net_position > 0 ? 'badge-long' : trader.net_position < 0 ? 'badge-short' : 'badge-flat'}">
-                                    ${trader.net_position > 0 ? '+' : ''}${trader.net_position}
-                                </span>
-                            </div>
+                        <div class="cell-value">
+                            <span class="badge ${trader.net_position > 0 ? 'badge-long' : trader.net_position < 0 ? 'badge-short' : 'badge-flat'}">
+                                ${trader.net_position > 0 ? '+' : ''}${trader.net_position}
+                            </span>
                         </div>
-                        <div>
-                            <div class="cell-label">Volume</div>
-                            <div class="cell-value">${(trader.total_buy_qty + trader.total_sell_qty).toLocaleString()}</div>
+                        <div class="cell-value">${(trader.total_buy_qty + trader.total_sell_qty).toLocaleString()}</div>
+                        <div class="cell-value val-buy">$${formatNum(trader.buy_value)}</div>
+                        <div class="cell-value val-sell">$${formatNum(trader.sell_value)}</div>
+                        <div class="cell-value" style="font-size: 0.8rem">
+                            B: ${trader.avg_buy.toFixed(4)} <br/> S: ${trader.avg_sell.toFixed(4)}
                         </div>
-                        <div>
-                            <div class="cell-label">Buy Value</div>
-                            <div class="cell-value val-buy">$${formatNum(trader.buy_value)}</div>
-                        </div>
-                        <div>
-                            <div class="cell-label">Sell Value</div>
-                            <div class="cell-value val-sell">$${formatNum(trader.sell_value)}</div>
-                        </div>
-                        <div>
-                            <div class="cell-label">Avg Buy / Sell</div>
-                            <div class="cell-value" style="font-size: 0.8rem">
-                                B: ${trader.avg_buy.toFixed(4)} <br/> S: ${trader.avg_sell.toFixed(4)}
-                            </div>
-                        </div>
-                        <div>
-                            <div class="cell-label">MTM (Gross P&L)</div>
-                            <div class="cell-value ${trader.gross_pl >= 0 ? 'val-pos' : 'val-neg'}">
-                                $${formatNum(trader.gross_pl)}
-                            </div>
+                        <div class="cell-value ${trader.gross_pl >= 0 ? 'val-pos' : 'val-neg'}">
+                            $${formatNum(trader.gross_pl)}
                         </div>
                         <div style="font-size: 0.7rem; color: var(--text-muted); padding-left: 1rem;">
-                            Symbols: ${trader.symbols.slice(0, 3).join(', ')}${trader.symbols.length > 3 ? '...' : ''}
+                            ${trader.symbols.slice(0, 3).join(', ')}${trader.symbols.length > 3 ? '...' : ''}
                         </div>
                         <div class="expand-icon">▼</div>
                     </div>
