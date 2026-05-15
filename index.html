@@ -35,7 +35,6 @@
             line-height: 1.5;
         }
 
-        /* Institutional Header */
         .top-nav {
             background: var(--header-bg);
             color: white;
@@ -66,7 +65,6 @@
             padding: 2rem;
         }
 
-        /* Summary Bar */
         .summary-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -97,7 +95,6 @@
             color: var(--primary);
         }
 
-        /* Filter Controls */
         .controls {
             background: var(--card-bg);
             padding: 1rem 1.5rem;
@@ -120,7 +117,6 @@
 
         .search-input:focus {
             border-color: var(--primary);
-            ring: 2px solid var(--primary);
         }
 
         .select-input {
@@ -131,7 +127,6 @@
             font-size: 0.875rem;
         }
 
-        /* Data Table Styles */
         .trader-list {
             display: flex;
             flex-direction: column;
@@ -178,7 +173,6 @@
         .expand-icon { text-align: right; color: var(--text-muted); transition: transform 0.3s; }
         .trader-row.open .expand-icon { transform: rotate(180deg); }
 
-        /* Detail Area */
         .row-detail {
             max-height: 0;
             overflow: hidden;
@@ -216,7 +210,6 @@
             border-bottom-color: var(--primary);
         }
 
-        /* Professional Tables */
         .pro-table {
             width: 100%;
             border-collapse: collapse;
@@ -244,7 +237,6 @@
         .val-pos { color: var(--success); }
         .val-neg { color: var(--danger); }
 
-        /* Badges */
         .badge {
             padding: 2px 8px;
             border-radius: 4px;
@@ -285,10 +277,7 @@
     </nav>
 
     <div class="container">
-        <div id="globalSummary" class="summary-grid">
-            <!-- Global stats injected here -->
-        </div>
-
+        <div id="globalSummary" class="summary-grid"></div>
         <div class="controls">
             <input type="text" class="search-input" id="searchBox" placeholder="Search by Account ID, Symbol or Side..." oninput="filterData()">
             <select class="select-input" id="posSelect" onchange="filterData()">
@@ -304,10 +293,7 @@
                 <option value="id">Account ID</option>
             </select>
         </div>
-
-        <div id="traderList" class="trader-list">
-            <!-- Trader rows injected here -->
-        </div>
+        <div id="traderList" class="trader-list"></div>
     </div>
 
     <script>
@@ -316,17 +302,17 @@
 
         async function loadDashboard() {
             try {
-                const res = await fetch('trader_data.json');
+                // Using ./ path for better compatibility with GitHub Pages
+                const res = await fetch('./trader_data.json');
                 allData = await res.json();
                 filteredData = [...allData];
                 
                 renderGlobalStats();
-                sortData(); // Initial sort & render
-                
+                sortData();
                 document.getElementById('loader').style.display = 'none';
             } catch (e) {
                 console.error(e);
-                document.getElementById('loader').innerHTML = '<div style="color:red">Failed to load data. Ensure trader_data.json is generated.</div>';
+                document.getElementById('loader').innerHTML = '<div style="color:red; padding: 2rem; text-align:center;">Failed to load data. Ensure trader_data.json is available in the root.</div>';
             }
         }
 
@@ -364,7 +350,6 @@
                         <div class="acc-id">
                             ${trader.account}${trader.is_master ? '<span class="master-tag">MASTER</span>' : ''}
                         </div>
-                        
                         <div>
                             <div class="cell-label">Net Position</div>
                             <div class="cell-value">
@@ -373,45 +358,37 @@
                                 </span>
                             </div>
                         </div>
-
                         <div>
                             <div class="cell-label">Buy Value</div>
                             <div class="cell-value val-buy">$${formatNum(trader.buy_value)}</div>
                         </div>
-
                         <div>
                             <div class="cell-label">Sell Value</div>
                             <div class="cell-value val-sell">$${formatNum(trader.sell_value)}</div>
                         </div>
-
                         <div>
                             <div class="cell-label">Avg Buy / Sell</div>
                             <div class="cell-value" style="font-size: 0.8rem">
                                 B: ${trader.avg_buy.toFixed(4)} <br/> S: ${trader.avg_sell.toFixed(4)}
                             </div>
                         </div>
-
                         <div>
                             <div class="cell-label">MTM (Gross P&L)</div>
                             <div class="cell-value ${trader.gross_pl >= 0 ? 'val-pos' : 'val-neg'}">
                                 $${formatNum(trader.gross_pl)}
                             </div>
                         </div>
-
                         <div style="font-size: 0.7rem; color: var(--text-muted); padding-left: 1rem;">
                             Symbols: ${trader.symbols.slice(0, 3).join(', ')}${trader.symbols.length > 3 ? '...' : ''}
                         </div>
-
                         <div class="expand-icon">▼</div>
                     </div>
-
                     <div class="row-detail">
                         <div class="detail-content">
                             <div class="tabs">
                                 <div class="tab-item active" onclick="switchTab(event, ${idx}, 'pos')">OPEN POSITIONS (${trader.positions.length})</div>
                                 <div class="tab-item" onclick="switchTab(event, ${idx}, 'trades')">EXECUTION LOG (${trader.trades.length})</div>
                             </div>
-
                             <div id="panel-${idx}-pos" class="tab-panel">
                                 ${renderPosTable(trader.positions)}
                             </div>
@@ -491,7 +468,6 @@
                         `).join('')}
                     </tbody>
                 </table>
-                ${trades.length > 50 ? `<div style="text-align:center; padding:1rem; font-size: 0.75rem; color:var(--text-muted)">Showing first 50 of ${trades.length} trades</div>` : ''}
             `;
         }
 
@@ -508,7 +484,6 @@
             const row = document.getElementById(`trader-${idx}`);
             row.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
             e.target.classList.add('active');
-            
             row.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
             document.getElementById(`panel-${idx}-${type}`).style.display = 'block';
         }
@@ -516,18 +491,12 @@
         function filterData() {
             const search = document.getElementById('searchBox').value.toLowerCase();
             const pos = document.getElementById('posSelect').value;
-
             filteredData = allData.filter(t => {
-                const matchesSearch = t.account.toLowerCase().includes(search) || 
-                                    t.symbols.some(s => s.toLowerCase().includes(search)) ||
-                                    (t.net_position > 0 && 'long'.includes(search)) ||
-                                    (t.net_position < 0 && 'short'.includes(search));
-                
+                const matchesSearch = t.account.toLowerCase().includes(search) || t.symbols.some(s => s.toLowerCase().includes(search));
                 let matchesPos = true;
                 if (pos === 'long') matchesPos = t.net_position > 0;
                 if (pos === 'short') matchesPos = t.net_position < 0;
                 if (pos === 'flat') matchesPos = t.net_position === 0;
-
                 return matchesSearch && matchesPos;
             });
             renderTraders();
@@ -538,7 +507,6 @@
             filteredData.sort((a, b) => {
                 if (a.is_master && !b.is_master) return -1;
                 if (!a.is_master && b.is_master) return 1;
-
                 if (val === 'pl') return b.gross_pl - a.gross_pl;
                 if (val === 'volume') return b.buy_value - a.buy_value;
                 if (val === 'trades') return b.num_trades - a.num_trades;
@@ -554,9 +522,7 @@
 
         loadDashboard();
     </script>
-    <style>
-        @keyframes spin { to { transform: rotate(360deg); } }
-    </style>
+    <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
 </body>
 
 </html>
