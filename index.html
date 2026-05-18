@@ -182,7 +182,8 @@
         }
 
         .trader-row.open .row-detail {
-            max-height: 1000px;
+            max-height: 600px;
+            overflow-y: auto;
         }
 
         .detail-content {
@@ -326,6 +327,25 @@
         .stat-group { display: flex; flex-direction: column; }
         .stat-label { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; }
         .stat-value { font-weight: 700; }
+
+        /* High-Frequency Update Flashing Visuals */
+        @keyframes flash-green {
+            0% { background-color: rgba(5, 150, 105, 0.25); }
+            100% { background-color: transparent; }
+        }
+
+        @keyframes flash-red {
+            0% { background-color: rgba(220, 38, 38, 0.25); }
+            100% { background-color: transparent; }
+        }
+
+        .flash-up {
+            animation: flash-green 0.8s ease-out;
+        }
+
+        .flash-down {
+            animation: flash-red 0.8s ease-out;
+        }
     </style>
 </head>
 
@@ -374,40 +394,55 @@
             <div></div>
         </div>
         <div id="traderList" class="trader-list" style="gap: 0;"></div>
-    </div>
-
     <script>
         let allData = [];
         let filteredData = [];
+        let expandedAccounts = new Set(); // Track expanded row account IDs
+        let activeTabs = new Map();       // Track active tab ('pos' or 'trades') for each account ID
+        let lastDataHash = "";            // Track JSON string hash to skip processing when there are no changes
+        const lastPanelData = new Map();  // Cache for stringified panel data to avoid unnecessary table re-renders
 
         async function loadDashboard() {
             try {
                 // Determine the correct path (handle local vs GitHub subfolder)
                 const path = window.location.pathname.endsWith('/') ? 'trader_data.json' : './trader_data.json';
-                console.log('Fetching data from:', path);
 
                 const res = await fetch(path);
                 if (!res.ok) {
                     throw new Error(`HTTP Error: ${res.status} - ${res.statusText}`);
                 }
                 
-                allData = await res.json();
-                filteredData = [...allData];
+                const resText = await res.text();
+                
+                // Hide loader and error debugger if successful
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('errorDebugger').style.display = 'none';
+                
+                // Skip processing if data has not changed
+                if (resText === lastDataHash) {
+                    return;
+                }
+                
+                lastDataHash = resText;
+                allData = JSON.parse(resText);
                 
                 renderGlobalStats();
+                filterData(false);
                 sortData();
-                document.getElementById('loader').style.display = 'none';
             } catch (e) {
-                console.error(e);
-                document.getElementById('loader').style.display = 'none';
-                const debug = document.getElementById('errorDebugger');
-                debug.style.display = 'block';
-                debug.innerHTML = `
-                    <strong>Data Load Failed</strong><br/>
-                    URL: ${window.location.href}<br/>
-                    Error: ${e.message}<br/><br/>
-                    <em>Tip: Ensure 'trader_data.json' exists in the same folder as this page on GitHub.</em>
-                `;
+                console.error("Dashboard update error:", e);
+                // Only show error screen if we haven't successfully loaded data yet
+                if (allData.length === 0) {
+                    document.getElementById('loader').style.display = 'none';
+                    const debug = document.getElementById('errorDebugger');
+                    debug.style.display = 'block';
+                    debug.innerHTML = `
+                        <strong>Data Load Failed</strong><br/>
+                        URL: ${window.location.href}<br/>
+                        Error: ${e.message}<br/><br/>
+                        <em>Tip: Ensure 'trader_data.json' exists in the same folder as this page on GitHub.</em>
+                    `;
+                }
             }
         }
 
@@ -427,26 +462,35 @@
                 });
             });
 
-            document.getElementById('globalSummary').innerHTML = `
-                <div class="summary-card">
-                    <div class="summary-label">Aggregate Gross P&L (MTM)</div>
-                    <div class="summary-value ${totalPL >= 0 ? 'val-pos' : 'val-neg'}">$${formatNum(totalPL)}</div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-label">Total Purchase Value</div>
-                    <div class="summary-value">$${formatNum(totalBuyVal)}</div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-label">Total Realization Value</div>
-                    <div class="summary-value">$${formatNum(totalSellVal)}</div>
-                </div>
-                <div class="summary-card">
-                    <div class="summary-label">Total Executions</div>
-                    <div class="summary-value">${totalTrades.toLocaleString()}</div>
-                </div>
-            `;
+            // Update Global Cards In-Place
+            const globalSummary = document.getElementById('globalSummary');
+            if (globalSummary.children.length === 0) {
+                globalSummary.innerHTML = `
+                    <div class="summary-card" id="card-pl">
+                        <div class="summary-label">Aggregate Gross P&L (MTM)</div>
+                        <div class="summary-value" data-field="val"></div>
+                    </div>
+                    <div class="summary-card" id="card-buy">
+                        <div class="summary-label">Total Purchase Value</div>
+                        <div class="summary-value" data-field="val"></div>
+                    </div>
+                    <div class="summary-card" id="card-sell">
+                        <div class="summary-label">Total Realization Value</div>
+                        <div class="summary-value" data-field="val"></div>
+                    </div>
+                    <div class="summary-card" id="card-trades">
+                        <div class="summary-label">Total Executions</div>
+                        <div class="summary-value" data-field="val"></div>
+                    </div>
+                `;
+            }
 
-            // Render Symbol Summary
+            updateGlobalCard('card-pl', `$${formatNum(totalPL)}`, totalPL, totalPL >= 0 ? 'val-pos' : 'val-neg');
+            updateGlobalCard('card-buy', `$${formatNum(totalBuyVal)}`, totalBuyVal);
+            updateGlobalCard('card-sell', `$${formatNum(totalSellVal)}`, totalSellVal);
+            updateGlobalCard('card-trades', totalTrades.toLocaleString(), totalTrades);
+
+            // Render Symbol Summary (with state-preserving HTML comparison)
             const symHtml = Object.keys(symMap).sort().map(sym => `
                 <div class="symbol-card">
                     <div class="symbol-card-title">${sym}</div>
@@ -469,55 +513,215 @@
                 </div>
             `).join('');
 
-            document.getElementById('symbolSummary').innerHTML = `
+            const symbolSummaryContainer = document.getElementById('symbolSummary');
+            const expectedSymContent = `
                 <div class="summary-label" style="margin-bottom: 1rem;">Contract Wise Volume</div>
                 <div class="symbol-grid">${symHtml || '<div style="color:var(--text-muted)">No trade data available.</div>'}</div>
             `;
+            
+            if (symbolSummaryContainer.innerHTML !== expectedSymContent) {
+                symbolSummaryContainer.innerHTML = expectedSymContent;
+            }
+        }
+
+        function updateGlobalCard(cardId, textValue, rawValue, extraClass = '') {
+            const card = document.getElementById(cardId);
+            if (!card) return;
+            const valEl = card.querySelector('[data-field="val"]');
+            if (!valEl) return;
+            
+            const prevValAttr = valEl.getAttribute('data-raw-val');
+            if (valEl.innerHTML !== textValue) {
+                valEl.className = `summary-value ${extraClass}`;
+                valEl.innerHTML = textValue;
+                
+                if (prevValAttr !== null && prevValAttr !== undefined) {
+                    const prevValue = parseFloat(prevValAttr);
+                    const currentValue = parseFloat(rawValue);
+                    if (!isNaN(prevValue) && !isNaN(currentValue) && prevValue !== currentValue) {
+                        if (currentValue > prevValue) {
+                            valEl.classList.add('flash-up');
+                        } else if (currentValue < prevValue) {
+                            valEl.classList.add('flash-down');
+                        }
+                        setTimeout(() => {
+                            valEl.classList.remove('flash-up', 'flash-down');
+                        }, 1000);
+                    }
+                }
+                valEl.setAttribute('data-raw-val', rawValue);
+            }
         }
 
         function renderTraders() {
             const container = document.getElementById('traderList');
-            container.innerHTML = filteredData.map((trader, idx) => `
-                <div class="trader-row ${trader.is_master ? 'master' : ''}" style="border-radius: 0; border-top: none;" id="trader-${idx}">
-                    <div class="row-header" onclick="toggleRow(${idx})">
-                        <div class="acc-id">
-                            ${trader.account}${trader.is_master ? '<span class="master-tag">MASTER</span>' : ''}
-                        </div>
-                        <div class="cell-value">
-                            <span class="badge ${trader.net_position > 0 ? 'badge-long' : trader.net_position < 0 ? 'badge-short' : 'badge-flat'}">
-                                ${trader.net_position > 0 ? '+' : ''}${trader.net_position}
-                            </span>
-                        </div>
-                        <div class="cell-value">${(trader.total_buy_qty + trader.total_sell_qty).toLocaleString()}</div>
-                        <div class="cell-value val-buy">$${formatNum(trader.buy_value)}</div>
-                        <div class="cell-value val-sell">$${formatNum(trader.sell_value)}</div>
-                        <div class="cell-value" style="font-size: 0.8rem">
-                            B: ${trader.avg_buy.toFixed(4)} <br/> S: ${trader.avg_sell.toFixed(4)}
-                        </div>
-                        <div class="cell-value ${trader.gross_pl >= 0 ? 'val-pos' : 'val-neg'}">
-                            $${formatNum(trader.gross_pl)}
-                        </div>
-                        <div style="font-size: 0.7rem; color: var(--text-muted); padding-left: 1rem;">
-                            ${trader.symbols.slice(0, 3).join(', ')}${trader.symbols.length > 3 ? '...' : ''}
-                        </div>
-                        <div class="expand-icon">▼</div>
-                    </div>
-                    <div class="row-detail">
-                        <div class="detail-content">
-                            <div class="tabs">
-                                <div class="tab-item active" onclick="switchTab(event, ${idx}, 'pos')">OPEN POSITIONS (${trader.positions.length})</div>
-                                <div class="tab-item" onclick="switchTab(event, ${idx}, 'trades')">EXECUTION LOG (${trader.trades.length})</div>
+            
+            // Keep track of accounts present in current filteredData
+            const currentAccounts = new Set(filteredData.map(t => t.account));
+            
+            // 1. Remove DOM elements for accounts that are no longer present
+            const existingRows = container.querySelectorAll('.trader-row');
+            existingRows.forEach(row => {
+                const acc = row.getAttribute('data-account');
+                if (!currentAccounts.has(acc)) {
+                    row.remove();
+                }
+            });
+            
+            // 2. Add or update existing rows
+            filteredData.forEach(trader => {
+                let row = document.getElementById(`trader-row-${trader.account}`);
+                
+                if (!row) {
+                    // Create a new row if it doesn't exist
+                    row = document.createElement('div');
+                    row.id = `trader-row-${trader.account}`;
+                    row.className = `trader-row ${trader.is_master ? 'master' : ''}`;
+                    row.setAttribute('data-account', trader.account);
+                    row.style.borderRadius = '0';
+                    row.style.borderTop = 'none';
+                    
+                    row.innerHTML = `
+                        <div class="row-header" onclick="toggleRow('${trader.account}')">
+                            <div class="acc-id">
+                                ${trader.account}${trader.is_master ? '<span class="master-tag">MASTER</span>' : ''}
                             </div>
-                            <div id="panel-${idx}-pos" class="tab-panel">
-                                ${renderPosTable(trader.positions)}
-                            </div>
-                            <div id="panel-${idx}-trades" class="tab-panel" style="display:none">
-                                ${renderTradeTable(trader.trades)}
+                            <div class="cell-value" data-field="net_position"></div>
+                            <div class="cell-value" data-field="volume"></div>
+                            <div class="cell-value val-buy" data-field="buy_value"></div>
+                            <div class="cell-value val-sell" data-field="sell_value"></div>
+                            <div class="cell-value" data-field="avg_bs" style="font-size: 0.8rem"></div>
+                            <div class="cell-value" data-field="gross_pl"></div>
+                            <div data-field="symbols" style="font-size: 0.7rem; color: var(--text-muted); padding-left: 1rem;"></div>
+                            <div class="expand-icon">▼</div>
+                        </div>
+                        <div class="row-detail">
+                            <div class="detail-content">
+                                <div class="tabs">
+                                    <div class="tab-item active" onclick="switchTab(event, '${trader.account}', 'pos')">OPEN POSITIONS (<span data-field="pos_count">0</span>)</div>
+                                    <div class="tab-item" onclick="switchTab(event, '${trader.account}', 'trades')">EXECUTION LOG (<span data-field="trades_count">0</span>)</div>
+                                </div>
+                                <div id="panel-${trader.account}-pos" class="tab-panel"></div>
+                                <div id="panel-${trader.account}-trades" class="tab-panel" style="display:none"></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            `).join('');
+                    `;
+                    container.appendChild(row);
+                }
+                
+                // Ensure correct expanded class is applied
+                if (expandedAccounts.has(trader.account)) {
+                    row.classList.add('open');
+                    renderDetailForAccount(trader.account);
+                } else {
+                    row.classList.remove('open');
+                }
+                
+                // Ensure correct tab active state is set in DOM if expanded
+                const activeTab = activeTabs.get(trader.account) || 'pos';
+                row.querySelectorAll('.tab-item').forEach(t => {
+                    const isPosTab = t.getAttribute('onclick').includes("'pos'");
+                    if ((activeTab === 'pos' && isPosTab) || (activeTab === 'trades' && !isPosTab)) {
+                        t.classList.add('active');
+                    } else {
+                        t.classList.remove('active');
+                    }
+                });
+                
+                // Update row values in-place
+                updateCell(row, 'net_position', `
+                    <span class="badge ${trader.net_position > 0 ? 'badge-long' : trader.net_position < 0 ? 'badge-short' : 'badge-flat'}">
+                        ${trader.net_position > 0 ? '+' : ''}${trader.net_position}
+                    </span>
+                `, trader.net_position);
+                
+                updateCell(row, 'volume', (trader.total_buy_qty + trader.total_sell_qty).toLocaleString(), trader.total_buy_qty + trader.total_sell_qty);
+                updateCell(row, 'buy_value', `$${formatNum(trader.buy_value)}`, trader.buy_value);
+                updateCell(row, 'sell_value', `$${formatNum(trader.sell_value)}`, trader.sell_value);
+                updateCell(row, 'avg_bs', `B: ${trader.avg_buy.toFixed(4)} <br/> S: ${trader.avg_sell.toFixed(4)}`, `${trader.avg_buy}-${trader.avg_sell}`);
+                
+                const plClass = trader.gross_pl >= 0 ? 'val-pos' : 'val-neg';
+                updateCell(row, 'gross_pl', `<span class="${plClass}">$${formatNum(trader.gross_pl)}</span>`, trader.gross_pl);
+                
+                updateCell(row, 'symbols', `${trader.symbols.slice(0, 3).join(', ')}${trader.symbols.length > 3 ? '...' : ''}`, trader.symbols.join(','));
+                
+                // Update tab counts
+                updateCell(row, 'pos_count', trader.positions.length.toString(), trader.positions.length);
+                updateCell(row, 'trades_count', trader.trades.length.toString(), trader.trades.length);
+            });
+            
+            // 3. Re-order DOM elements to match the sorted filteredData order
+            filteredData.forEach(trader => {
+                const row = document.getElementById(`trader-row-${trader.account}`);
+                if (row) {
+                    container.appendChild(row);
+                }
+            });
+        }
+
+        function updateCell(row, fieldName, newHtml, rawValue) {
+            const cell = row.querySelector(`[data-field="${fieldName}"]`);
+            if (!cell) return;
+            
+            const prevValueAttr = cell.getAttribute('data-raw-val');
+            
+            if (cell.innerHTML !== newHtml) {
+                cell.innerHTML = newHtml;
+                
+                // Flash visual effect on value changes
+                if (prevValueAttr !== null && prevValueAttr !== undefined) {
+                    const prevValue = parseFloat(prevValueAttr);
+                    const currentValue = parseFloat(rawValue);
+                    
+                    if (!isNaN(prevValue) && !isNaN(currentValue) && prevValue !== currentValue) {
+                        if (currentValue > prevValue) {
+                            cell.classList.remove('flash-up', 'flash-down');
+                            void cell.offsetWidth; // Trigger reflow to restart animation
+                            cell.classList.add('flash-up');
+                        } else if (currentValue < prevValue) {
+                            cell.classList.remove('flash-up', 'flash-down');
+                            void cell.offsetWidth; // Trigger reflow to restart animation
+                            cell.classList.add('flash-down');
+                        }
+                    }
+                }
+                cell.setAttribute('data-raw-val', rawValue);
+            }
+        }
+
+        function renderDetailForAccount(account) {
+            const trader = allData.find(t => t.account === account);
+            if (!trader) return;
+            
+            const tab = activeTabs.get(account) || 'pos';
+            const panel = document.getElementById(`panel-${account}-${tab}`);
+            if (!panel) return;
+            
+            const currentData = tab === 'pos' ? trader.positions : trader.trades;
+            const dataStr = JSON.stringify(currentData);
+            const cacheKey = `${account}-${tab}`;
+            
+            // Only render if data has changed
+            if (lastPanelData.get(cacheKey) === dataStr) {
+                return;
+            }
+            
+            lastPanelData.set(cacheKey, dataStr);
+            
+            // Show active panel, hide inactive one
+            const row = document.getElementById(`trader-row-${account}`);
+            if (row) {
+                row.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
+                const targetPanel = row.querySelector(`#panel-${account}-${tab}`);
+                if (targetPanel) {
+                    targetPanel.style.display = 'block';
+                    if (tab === 'pos') {
+                        targetPanel.innerHTML = renderPosTable(trader.positions);
+                    } else {
+                        targetPanel.innerHTML = renderTradeTable(trader.trades);
+                    }
+                }
+            }
         }
 
         function renderPosTable(positions) {
@@ -594,20 +798,32 @@
             return positions.reduce((s, p) => s + p.MTM, 0);
         }
 
-        function toggleRow(idx) {
-            document.getElementById(`trader-${idx}`).classList.toggle('open');
+        function toggleRow(account) {
+            const row = document.getElementById(`trader-row-${account}`);
+            if (!row) return;
+            if (expandedAccounts.has(account)) {
+                expandedAccounts.delete(account);
+                row.classList.remove('open');
+            } else {
+                expandedAccounts.add(account);
+                row.classList.add('open');
+                renderDetailForAccount(account);
+            }
         }
 
-        function switchTab(e, idx, type) {
+        function switchTab(e, account, type) {
             e.stopPropagation();
-            const row = document.getElementById(`trader-${idx}`);
+            activeTabs.set(account, type);
+            const row = document.getElementById(`trader-row-${account}`);
+            if (!row) return;
+            
             row.querySelectorAll('.tab-item').forEach(t => t.classList.remove('active'));
             e.target.classList.add('active');
-            row.querySelectorAll('.tab-panel').forEach(p => p.style.display = 'none');
-            document.getElementById(`panel-${idx}-${type}`).style.display = 'block';
+            
+            renderDetailForAccount(account);
         }
 
-        function filterData() {
+        function filterData(shouldRender = true) {
             const search = document.getElementById('searchBox').value.toLowerCase();
             const pos = document.getElementById('posSelect').value;
             filteredData = allData.filter(t => {
@@ -618,7 +834,9 @@
                 if (pos === 'flat') matchesPos = t.net_position === 0;
                 return matchesSearch && matchesPos;
             });
-            renderTraders();
+            if (shouldRender) {
+                renderTraders();
+            }
         }
 
         function sortData() {
@@ -640,9 +858,11 @@
             return n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         }
 
+        // Initial Load
         loadDashboard();
-    </script>
-    <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
-</body>
 
+        // 1-Second Real-Time Update Interval
+        setInterval(loadDashboard, 1000);
+    </script>
+</body>
 </html>
