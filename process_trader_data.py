@@ -1,6 +1,8 @@
 import pandas as pd
 import json
 import os
+import sys
+import time
 
 def process_trading_data():
     # 1. Load 111.csv (Trade Executions)
@@ -9,11 +11,17 @@ def process_trading_data():
         print(f"Error: {trades_file} not found")
         return
 
-    df_trades = pd.read_csv(trades_file, header=None)
+    try:
+        df_trades = pd.read_csv(trades_file, header=None)
+    except Exception as e:
+        print(f"Error reading trades file: {e}")
+        return
+
     df_trades.columns = [
         'TradeID', 'Qty', 'Price', 'Unknown3', 'Symbol', 'Side', 
         'Date', 'Time', 'ExecPrice', 'Exchange', 'Account', 'Account2', 'Symbol2'
     ]
+    
     def clean_acc(acc):
         acc = str(acc).strip()
         if 'XOF' in acc:
@@ -26,10 +34,14 @@ def process_trading_data():
     # 2. Load PHILLIP_Open_Position_XOF9000_20260514.csv (Positions)
     positions_file = 'PHILLIP_Open_Position_XOF9000_20260514.csv'
     if not os.path.exists(positions_file):
-        print(f"Error: {positions_file} not found")
+        print(f"Warning: {positions_file} not found")
         df_positions = pd.DataFrame()
     else:
-        df_positions = pd.read_csv(positions_file)
+        try:
+            df_positions = pd.read_csv(positions_file)
+        except Exception as e:
+            print(f"Error reading positions file: {e}")
+            df_positions = pd.DataFrame()
 
     # Clean Client_No in positions
     if not df_positions.empty:
@@ -44,25 +56,45 @@ def process_trading_data():
     if not df_positions.empty:
         all_accounts.update(df_positions['Client_No'].unique())
         
+    # Group by account for fast O(1) group lookup instead of O(N) scanning
+    trades_groups = {name: group for name, group in df_trades.groupby('Account')}
+    
+    positions_groups = {}
+    if not df_positions.empty:
+        positions_groups = {name: group for name, group in df_positions.groupby('Client_No')}
+        
     traders_list = []
 
     for acc in all_accounts:
-        acc_trades = df_trades[df_trades['Account'] == acc]
-        acc_positions = df_positions[df_positions['Client_No'] == acc] if not df_positions.empty else pd.DataFrame()
+        acc_trades = trades_groups.get(acc, pd.DataFrame())
+        acc_positions = positions_groups.get(acc, pd.DataFrame())
         
         # Metrics from trades
-        buy_trades = acc_trades[acc_trades['Side'] == 'B']
-        sell_trades = acc_trades[acc_trades['Side'] == 'S']
-        
-        total_buy_qty = int(buy_trades['Qty'].sum())
-        total_sell_qty = int(sell_trades['Qty'].sum())
-        
-        # Buy Value & Sell Value
-        buy_value = float(buy_trades['Value'].sum())
-        sell_value = float(sell_trades['Value'].sum())
-        
-        avg_buy = float(buy_trades['Price'].mean()) if total_buy_qty > 0 else 0.0
-        avg_sell = float(sell_trades['Price'].mean()) if total_sell_qty > 0 else 0.0
+        if not acc_trades.empty:
+            buy_trades = acc_trades[acc_trades['Side'] == 'B']
+            sell_trades = acc_trades[acc_trades['Side'] == 'S']
+            
+            total_buy_qty = int(buy_trades['Qty'].sum())
+            total_sell_qty = int(sell_trades['Qty'].sum())
+            
+            # Buy Value & Sell Value
+            buy_value = float(buy_trades['Value'].sum())
+            sell_value = float(sell_trades['Value'].sum())
+            
+            avg_buy = float(buy_trades['Price'].mean()) if total_buy_qty > 0 else 0.0
+            avg_sell = float(sell_trades['Price'].mean()) if total_sell_qty > 0 else 0.0
+            
+            num_trades = len(acc_trades)
+            volatility = float(acc_trades['Price'].std()) if num_trades > 1 else 0.0
+        else:
+            total_buy_qty = 0
+            total_sell_qty = 0
+            buy_value = 0.0
+            sell_value = 0.0
+            avg_buy = 0.0
+            avg_sell = 0.0
+            num_trades = 0
+            volatility = 0.0
         
         # Gross P&L (Sum of MTM)
         gross_pl = float(acc_positions['Unrealised_pl_value'].sum()) if not acc_positions.empty else 0.0
@@ -77,25 +109,23 @@ def process_trading_data():
         else:
             net_position = 0
             
-        num_trades = len(acc_trades)
-        volatility = float(acc_trades['Price'].std()) if num_trades > 1 else 0.0
-        
         symbols = set()
         if not acc_trades.empty: symbols.update(acc_trades['Symbol'].unique())
         if not acc_positions.empty: symbols.update(acc_positions['Com_cd'].unique())
         
         # Trade History
         trades_history = []
-        for _, row in acc_trades.iterrows():
-            trades_history.append({
-                'Time': str(row['Time']),
-                'Symbol': str(row['Symbol']),
-                'Side': str(row['Side']),
-                'Qty': int(row['Qty']),
-                'Price': float(row['Price']),
-                'Value': float(row['Value']),
-                'Exchange': str(row['Exchange'])
-            })
+        if not acc_trades.empty:
+            for _, row in acc_trades.iterrows():
+                trades_history.append({
+                    'Time': str(row['Time']),
+                    'Symbol': str(row['Symbol']),
+                    'Side': str(row['Side']),
+                    'Qty': int(row['Qty']),
+                    'Price': float(row['Price']),
+                    'Value': float(row['Value']),
+                    'Exchange': str(row['Exchange'])
+                })
         
         # Current Positions Detail
         current_positions = []
@@ -131,10 +161,50 @@ def process_trading_data():
 
     traders_list.sort(key=lambda x: (x['is_master'], x['total_buy_qty'] + x['total_sell_qty']), reverse=True)
 
-    with open('trader_data.json', 'w') as f:
-        json.dump(traders_list, f, indent=2)
+    # Write atomically to prevent partially-written file reads on the web app frontend
+    temp_file = 'trader_data.json.tmp'
+    try:
+        with open(temp_file, 'w') as f:
+            json.dump(traders_list, f, indent=2)
+        os.replace(temp_file, 'trader_data.json')
+    except Exception as e:
+        print(f"Error saving JSON file: {e}")
+        if os.path.exists(temp_file):
+            try:
+                os.remove(temp_file)
+            except:
+                pass
+
+def live_processor_loop():
+    print("Starting Live Data Processor Loop...")
+    trades_file = '111.csv'
+    positions_file = 'PHILLIP_Open_Position_XOF9000_20260514.csv'
+    
+    last_mtime_trades = 0
+    last_mtime_positions = 0
+    
+    # Process once on start
+    process_trading_data()
+    last_mtime_trades = os.path.getmtime(trades_file) if os.path.exists(trades_file) else 0
+    last_mtime_positions = os.path.getmtime(positions_file) if os.path.exists(positions_file) else 0
+
+    while True:
+        try:
+            mtime_trades = os.path.getmtime(trades_file) if os.path.exists(trades_file) else 0
+            mtime_positions = os.path.getmtime(positions_file) if os.path.exists(positions_file) else 0
+            
+            if mtime_trades != last_mtime_trades or mtime_positions != last_mtime_positions:
+                print(f"[{time.strftime('%H:%M:%S')}] Change detected in data source files. Reprocessing...")
+                process_trading_data()
+                last_mtime_trades = mtime_trades
+                last_mtime_positions = mtime_positions
+        except Exception as e:
+            print(f"[{time.strftime('%H:%M:%S')}] Error in live processor loop: {e}")
         
-    print(f"Successfully processed {len(traders_list)} accounts and saved to trader_data.json")
+        time.sleep(0.5)
 
 if __name__ == "__main__":
-    process_trading_data()
+    if len(sys.argv) > 1 and sys.argv[1] == '--live':
+        live_processor_loop()
+    else:
+        process_trading_data()

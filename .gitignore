@@ -13,3 +13,11 @@ venv/
 
 # Logs
 *.log
+
+# Node / Vite / React
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+.eslintcache
