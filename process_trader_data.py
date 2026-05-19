@@ -371,6 +371,11 @@ def process_trading_data():
         with open(temp_file, 'w') as f:
             json.dump(traders_list, f, indent=2)
         os.replace(temp_file, 'trader_data.json')
+        
+        # Also write/copy to dist/trader_data.json if dist folder exists for static host support
+        if os.path.exists('dist'):
+            import shutil
+            shutil.copy('trader_data.json', 'dist/trader_data.json')
     except Exception as e:
         print(f"Error saving JSON file: {e}")
         if os.path.exists(temp_file):

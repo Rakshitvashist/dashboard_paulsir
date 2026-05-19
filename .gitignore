@@ -16,7 +16,7 @@ venv/
 
 # Node / Vite / React
 node_modules/
-dist/
+# dist/
 dist-ssr/
 *.local
 .vite/
