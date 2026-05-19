@@ -3,12 +3,41 @@ import json
 import os
 import sys
 import time
+import glob
 
-def process_trading_data():
-    # 1. Load 111.csv (Trade Executions)
+def resolve_data_sources():
+    # 1. Find trades file
     trades_file = '111.csv'
     if not os.path.exists(trades_file):
-        print(f"Error: {trades_file} not found")
+        all_files = glob.glob('.All_*.csv')
+        if all_files:
+            all_files.sort(key=os.path.getmtime, reverse=True)
+            trades_file = all_files[0]
+            
+    # 2. Find latest positions files
+    pos_files = glob.glob('PHILLIP_Open_Position_*.csv')
+    dates = []
+    for fn in pos_files:
+        base = os.path.basename(fn)
+        parts = base.split('_')
+        if len(parts) >= 5:
+            dt = parts[4].split('.')[0]
+            dates.append(dt)
+            
+    latest_date = max(dates) if dates else None
+    positions_files = []
+    if latest_date:
+        positions_files = [fn for fn in pos_files if latest_date in fn]
+        
+    return trades_file, positions_files
+
+def process_trading_data():
+    trades_file, positions_files = resolve_data_sources()
+    print(f"Processing Trades from: {trades_file}")
+    print(f"Processing Positions from: {positions_files}")
+
+    if not trades_file or not os.path.exists(trades_file):
+        print("Error: No trades file found")
         return
 
     try:
@@ -58,17 +87,20 @@ def process_trading_data():
     df_trades['BaseSymbol'] = [p[0] for p in parsed_symbols]
     df_trades['ContractMonth'] = [p[1] for p in parsed_symbols]
 
-    # 2. Load PHILLIP_Open_Position_XOF9000_20260514.csv (Positions)
-    positions_file = 'PHILLIP_Open_Position_XOF9000_20260514.csv'
-    if not os.path.exists(positions_file):
-        print(f"Warning: {positions_file} not found")
-        df_positions = pd.DataFrame()
-    else:
+    # Load and combine all matching positions files
+    dfs = []
+    for fn in positions_files:
         try:
-            df_positions = pd.read_csv(positions_file)
+            df = pd.read_csv(fn)
+            if not df.empty:
+                dfs.append(df)
         except Exception as e:
-            print(f"Error reading positions file: {e}")
-            df_positions = pd.DataFrame()
+            print(f"Error loading positions file {fn}: {e}")
+            
+    if dfs:
+        df_positions = pd.concat(dfs, ignore_index=True)
+    else:
+        df_positions = pd.DataFrame()
 
     # Clean Client_No in positions
     if not df_positions.empty:
@@ -305,27 +337,39 @@ def process_trading_data():
 
 def live_processor_loop():
     print("Starting Live Data Processor Loop...")
-    trades_file = '111.csv'
-    positions_file = 'PHILLIP_Open_Position_XOF9000_20260514.csv'
+    monitored_files = {}
     
-    last_mtime_trades = 0
-    last_mtime_positions = 0
-    
-    # Process once on start
+    def check_updates():
+        trades_file, positions_files = resolve_data_sources()
+        all_monitored = [trades_file] + positions_files
+        all_monitored = [f for f in all_monitored if f and os.path.exists(f)]
+        
+        updated = False
+        current_mtimes = {}
+        for f in all_monitored:
+            mtime = os.path.getmtime(f)
+            current_mtimes[f] = mtime
+            if f not in monitored_files or monitored_files[f] != mtime:
+                updated = True
+                
+        for f in list(monitored_files.keys()):
+            if f not in current_mtimes:
+                updated = True
+                
+        return updated, current_mtimes
+
+    # Run once at start
     process_trading_data()
-    last_mtime_trades = os.path.getmtime(trades_file) if os.path.exists(trades_file) else 0
-    last_mtime_positions = os.path.getmtime(positions_file) if os.path.exists(positions_file) else 0
+    _, mtimes = check_updates()
+    monitored_files = mtimes
 
     while True:
         try:
-            mtime_trades = os.path.getmtime(trades_file) if os.path.exists(trades_file) else 0
-            mtime_positions = os.path.getmtime(positions_file) if os.path.exists(positions_file) else 0
-            
-            if mtime_trades != last_mtime_trades or mtime_positions != last_mtime_positions:
+            updated, mtimes = check_updates()
+            if updated:
                 print(f"[{time.strftime('%H:%M:%S')}] Change detected in data source files. Reprocessing...")
                 process_trading_data()
-                last_mtime_trades = mtime_trades
-                last_mtime_positions = mtime_positions
+                monitored_files = mtimes
         except Exception as e:
             print(f"[{time.strftime('%H:%M:%S')}] Error in live processor loop: {e}")
         
