@@ -5,6 +5,7 @@ export default function SymbolSummary({ data }) {
     const map = {};
     data.forEach(trader => {
       trader.trades.forEach(t => {
+        if (!t.Symbol || t.Symbol.includes('-')) return;
         if (!map[t.Symbol]) map[t.Symbol] = { buy: 0, sell: 0 };
         if (t.Side === 'B') map[t.Symbol].buy += t.Qty;
         else if (t.Side === 'S') map[t.Symbol].sell += t.Qty;
