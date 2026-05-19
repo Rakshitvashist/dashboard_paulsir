@@ -4269,168 +4269,6 @@
     ]
   },
   {
-    "account": "S-XOF8018",
-    "name": "KRITI MALHOTRA",
-    "backcode": "PF036",
-    "is_master": false,
-    "total_buy_qty": 41,
-    "buy_value": 4251.780000000001,
-    "avg_buy": 103.69999999999999,
-    "total_sell_qty": 11,
-    "sell_value": 1141.31,
-    "avg_sell": 103.74333333333333,
-    "net_position": 30,
-    "gross_pl": 0.0,
-    "num_trades": 12,
-    "volatility": 0.03752776749732402,
-    "symbols": [
-      "DINR"
-    ],
-    "trades": [
-      {
-        "Time": "10:30:38",
-        "Symbol": "DINR",
-        "Side": "S",
-        "Qty": 5,
-        "Price": 103.77,
-        "Value": 518.85,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:05:59",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 5,
-        "Price": 103.76,
-        "Value": 518.8000000000001,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:05:59",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 5,
-        "Price": 103.76,
-        "Value": 518.8000000000001,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:41:41",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 5,
-        "Price": 103.68,
-        "Value": 518.4000000000001,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:41:41",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 5,
-        "Price": 103.68,
-        "Value": 518.4000000000001,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:41:41",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 5,
-        "Price": 103.68,
-        "Value": 518.4000000000001,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:41:41",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "13:13:35",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 5,
-        "Price": 103.69,
-        "Value": 518.45,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "13:13:35",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 5,
-        "Price": 103.69,
-        "Value": 518.45,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "13:27:38",
-        "Symbol": "DINR",
-        "Side": "S",
-        "Qty": 5,
-        "Price": 103.75,
-        "Value": 518.75,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "13:39:35",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 5,
-        "Price": 103.68,
-        "Value": 518.4000000000001,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "13:39:48",
-        "Symbol": "DINR",
-        "Side": "S",
-        "Qty": 1,
-        "Price": 103.71,
-        "Value": 103.71,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      }
-    ],
-    "positions": [
-      {
-        "scrip": "DINR-DGCX",
-        "exchange": "DGCX",
-        "scrip_name": "DINR",
-        "expiry_date": "May 26",
-        "callput": "NaN",
-        "strike": 0,
-        "bf_qty": 0,
-        "buy_qty": 41,
-        "sell_qty": 11,
-        "net_qty": 30,
-        "average_rate": 103.70195121951221,
-        "ltp": 103.71,
-        "mtm": 0.8299999999990177,
-        "intraday_mtm": 0.0,
-        "exchange_delta": 0,
-        "day_bought_qty": 41,
-        "day_sold_qty": 11
-      }
-    ]
-  },
-  {
     "account": "XOF8018",
     "name": "KRITI MALHOTRA",
     "backcode": "PF036",
@@ -4644,81 +4482,81 @@
     ]
   },
   {
-    "account": "S-XOF8014",
-    "name": "CHANDRA KANT MISHRA",
-    "backcode": "PF032",
+    "account": "S-XOF8018",
+    "name": "KRITI MALHOTRA",
+    "backcode": "PF036",
     "is_master": false,
-    "total_buy_qty": 12,
-    "buy_value": 1244.8600000000004,
-    "avg_buy": 103.73833333333336,
-    "total_sell_qty": 1,
-    "sell_value": 103.71,
-    "avg_sell": 103.71,
-    "net_position": 11,
+    "total_buy_qty": 41,
+    "buy_value": 4251.780000000001,
+    "avg_buy": 103.69999999999999,
+    "total_sell_qty": 11,
+    "sell_value": 1141.31,
+    "avg_sell": 103.74333333333333,
+    "net_position": 30,
     "gross_pl": 0.0,
-    "num_trades": 13,
-    "volatility": 0.059517289020143554,
+    "num_trades": 12,
+    "volatility": 0.03752776749732402,
     "symbols": [
       "DINR"
     ],
     "trades": [
       {
-        "Time": "11:13:16",
+        "Time": "10:30:38",
         "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.8,
-        "Value": 103.8,
+        "Side": "S",
+        "Qty": 5,
+        "Price": 103.77,
+        "Value": 518.85,
         "Exchange": "DGCX",
         "Expiry": "May 26"
       },
       {
-        "Time": "11:13:16",
+        "Time": "12:05:59",
         "Symbol": "DINR",
         "Side": "B",
-        "Qty": 1,
-        "Price": 103.8,
-        "Value": 103.8,
+        "Qty": 5,
+        "Price": 103.76,
+        "Value": 518.8000000000001,
         "Exchange": "DGCX",
         "Expiry": "May 26"
       },
       {
-        "Time": "11:52:08",
+        "Time": "12:05:59",
         "Symbol": "DINR",
         "Side": "B",
-        "Qty": 1,
-        "Price": 103.82,
-        "Value": 103.82,
+        "Qty": 5,
+        "Price": 103.76,
+        "Value": 518.8000000000001,
         "Exchange": "DGCX",
         "Expiry": "May 26"
       },
       {
-        "Time": "12:11:47",
+        "Time": "12:41:41",
         "Symbol": "DINR",
         "Side": "B",
-        "Qty": 1,
-        "Price": 103.79,
-        "Value": 103.79,
+        "Qty": 5,
+        "Price": 103.68,
+        "Value": 518.4000000000001,
         "Exchange": "DGCX",
         "Expiry": "May 26"
       },
       {
-        "Time": "12:11:47",
+        "Time": "12:41:41",
         "Symbol": "DINR",
         "Side": "B",
-        "Qty": 1,
-        "Price": 103.79,
-        "Value": 103.79,
+        "Qty": 5,
+        "Price": 103.68,
+        "Value": 518.4000000000001,
         "Exchange": "DGCX",
         "Expiry": "May 26"
       },
       {
-        "Time": "12:15:10",
+        "Time": "12:41:41",
         "Symbol": "DINR",
         "Side": "B",
-        "Qty": 1,
-        "Price": 103.78,
-        "Value": 103.78,
+        "Qty": 5,
+        "Price": 103.68,
+        "Value": 518.4000000000001,
         "Exchange": "DGCX",
         "Expiry": "May 26"
       },
@@ -4733,12 +4571,32 @@
         "Expiry": "May 26"
       },
       {
-        "Time": "12:41:41",
+        "Time": "13:13:35",
         "Symbol": "DINR",
         "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
+        "Qty": 5,
+        "Price": 103.69,
+        "Value": 518.45,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "13:13:35",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 5,
+        "Price": 103.69,
+        "Value": 518.45,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "13:27:38",
+        "Symbol": "DINR",
+        "Side": "S",
+        "Qty": 5,
+        "Price": 103.75,
+        "Value": 518.75,
         "Exchange": "DGCX",
         "Expiry": "May 26"
       },
@@ -4746,19 +4604,9 @@
         "Time": "13:39:35",
         "Symbol": "DINR",
         "Side": "B",
-        "Qty": 1,
+        "Qty": 5,
         "Price": 103.68,
-        "Value": 103.68,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "13:39:35",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
+        "Value": 518.4000000000001,
         "Exchange": "DGCX",
         "Expiry": "May 26"
       },
@@ -4769,26 +4617,6 @@
         "Qty": 1,
         "Price": 103.71,
         "Value": 103.71,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "14:30:54",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "14:30:54",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
         "Exchange": "DGCX",
         "Expiry": "May 26"
       }
@@ -4802,16 +4630,16 @@
         "callput": "NaN",
         "strike": 0,
         "bf_qty": 0,
-        "buy_qty": 12,
-        "sell_qty": 1,
-        "net_qty": 11,
-        "average_rate": 103.73833333333336,
-        "ltp": 103.68,
-        "mtm": -0.6700000000003001,
+        "buy_qty": 41,
+        "sell_qty": 11,
+        "net_qty": 30,
+        "average_rate": 103.70195121951221,
+        "ltp": 103.71,
+        "mtm": 0.8299999999990177,
         "intraday_mtm": 0.0,
         "exchange_delta": 0,
-        "day_bought_qty": 12,
-        "day_sold_qty": 1
+        "day_bought_qty": 41,
+        "day_sold_qty": 11
       }
     ]
   },
@@ -5005,6 +4833,178 @@
         "exchange_delta": 1,
         "day_bought_qty": 1,
         "day_sold_qty": 12
+      }
+    ]
+  },
+  {
+    "account": "S-XOF8014",
+    "name": "CHANDRA KANT MISHRA",
+    "backcode": "PF032",
+    "is_master": false,
+    "total_buy_qty": 12,
+    "buy_value": 1244.8600000000004,
+    "avg_buy": 103.73833333333336,
+    "total_sell_qty": 1,
+    "sell_value": 103.71,
+    "avg_sell": 103.71,
+    "net_position": 11,
+    "gross_pl": 0.0,
+    "num_trades": 13,
+    "volatility": 0.059517289020143554,
+    "symbols": [
+      "DINR"
+    ],
+    "trades": [
+      {
+        "Time": "11:13:16",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.8,
+        "Value": 103.8,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "11:13:16",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.8,
+        "Value": 103.8,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "11:52:08",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.82,
+        "Value": 103.82,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:11:47",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.79,
+        "Value": 103.79,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:11:47",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.79,
+        "Value": 103.79,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:15:10",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.78,
+        "Value": 103.78,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:41:41",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:41:41",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "13:39:35",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "13:39:35",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "13:39:48",
+        "Symbol": "DINR",
+        "Side": "S",
+        "Qty": 1,
+        "Price": 103.71,
+        "Value": 103.71,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "14:30:54",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "14:30:54",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      }
+    ],
+    "positions": [
+      {
+        "scrip": "DINR-DGCX",
+        "exchange": "DGCX",
+        "scrip_name": "DINR",
+        "expiry_date": "May 26",
+        "callput": "NaN",
+        "strike": 0,
+        "bf_qty": 0,
+        "buy_qty": 12,
+        "sell_qty": 1,
+        "net_qty": 11,
+        "average_rate": 103.73833333333336,
+        "ltp": 103.68,
+        "mtm": -0.6700000000003001,
+        "intraday_mtm": 0.0,
+        "exchange_delta": 0,
+        "day_bought_qty": 12,
+        "day_sold_qty": 1
       }
     ]
   },
