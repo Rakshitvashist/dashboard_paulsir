@@ -435,6 +435,19 @@ def process_trading_data():
         # Also write/copy to dist/trader_data.json if dist folder exists for static host support
         if os.path.exists('dist'):
             shutil.copy('trader_data.json', 'dist/trader_data.json')
+            
+            # Also copy dist/index.html to root index.html so GitHub Pages loads it immediately at the root URL
+            if os.path.exists('dist/index.html'):
+                shutil.copy('dist/index.html', 'index.html')
+                
+            # Also copy dist/assets/ to root assets/ so assets resolve correctly in the root index.html
+            if os.path.exists('dist/assets'):
+                if os.path.exists('assets'):
+                    try:
+                        shutil.rmtree('assets')
+                    except:
+                        pass
+                shutil.copytree('dist/assets', 'assets')
     except Exception as e:
         print(f"Error saving JSON file: {e}")
         if os.path.exists(temp_file):
