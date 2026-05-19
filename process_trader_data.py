@@ -24,8 +24,13 @@ def process_trading_data():
     
     def clean_acc(acc):
         acc = str(acc).strip()
-        if 'XOF' in acc:
-            return acc[acc.find('XOF'):]
+        idx_xof = acc.find('XOF')
+        idx_xob = acc.find('XOB')
+        idx = idx_xof if idx_xof != -1 else idx_xob
+        if idx != -1:
+            if idx >= 2 and acc[idx-2:idx] == 'S-':
+                return acc[idx-2:]
+            return acc[idx:]
         return acc
 
     df_trades['Account'] = df_trades['Account'].apply(clean_acc)
@@ -61,7 +66,13 @@ def process_trading_data():
     
     try:
         df_clients = pd.read_excel('CLNT_MST.xlsx')
-        client_map = dict(zip(df_clients['Account'].astype(str).str.strip(), df_clients['Name'].astype(str).str.strip()))
+        client_map = {}
+        for _, row in df_clients.iterrows():
+            client_acc = str(row['Account']).strip()
+            client_map[client_acc] = {
+                'name': str(row['Name']).strip(),
+                'backcode': str(row['BackCode']).strip()
+            }
     except Exception as e:
         print(f"Error reading client master file: {e}")
         client_map = {}
@@ -73,10 +84,12 @@ def process_trading_data():
     traders_list = []
 
     for acc in all_accounts:
-        if str(acc) != 'XOF9000' and (not client_map or acc not in client_map):
+        if not client_map or acc not in client_map:
             continue
             
-        acc_name = client_map.get(acc, "")
+        acc_info = client_map[acc]
+        acc_name = acc_info['name']
+        acc_backcode = acc_info['backcode']
         acc_trades = trades_groups.get(acc, pd.DataFrame())
         acc_positions = positions_groups.get(acc, pd.DataFrame())
         
@@ -155,6 +168,7 @@ def process_trading_data():
         traders_list.append({
             'account': str(acc),
             'name': acc_name,
+            'backcode': acc_backcode,
             'is_master': True if str(acc) == 'XOF9000' else False,
             'total_buy_qty': total_buy_qty,
             'buy_value': buy_value,

@@ -17,8 +17,20 @@ export default function TraderRow({ trader }) {
     <div className={`trader-row ${trader.is_master ? 'master' : ''} ${isOpen ? 'open' : ''}`} style={{ borderRadius: 0, borderTop: 'none' }}>
       <div className="row-header" onClick={() => setIsOpen(!isOpen)}>
         <div className="acc-id">
-          <div>
-            {trader.account}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ fontWeight: 'bold' }}>{trader.account}</span>
+            {trader.backcode && (
+              <span style={{
+                fontSize: '0.7rem',
+                background: 'rgba(255, 255, 255, 0.1)',
+                padding: '1px 5px',
+                borderRadius: '3px',
+                color: 'var(--text-muted)',
+                fontWeight: 'normal'
+              }}>
+                {trader.backcode}
+              </span>
+            )}
             {trader.is_master && <span className="master-tag">MASTER</span>}
           </div>
           {trader.name && (
