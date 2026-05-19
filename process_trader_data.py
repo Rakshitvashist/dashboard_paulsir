@@ -427,9 +427,13 @@ def process_trading_data():
             json.dump(traders_list, f, indent=2)
         os.replace(temp_file, 'trader_data.json')
         
+        # Also write/copy to public/trader_data.json so Vite always copies it to dist/ during build
+        os.makedirs('public', exist_ok=True)
+        import shutil
+        shutil.copy('trader_data.json', 'public/trader_data.json')
+        
         # Also write/copy to dist/trader_data.json if dist folder exists for static host support
         if os.path.exists('dist'):
-            import shutil
             shutil.copy('trader_data.json', 'dist/trader_data.json')
     except Exception as e:
         print(f"Error saving JSON file: {e}")
