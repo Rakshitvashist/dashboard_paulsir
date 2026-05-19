@@ -186,8 +186,9 @@ def process_trading_data():
         if not acc_backcode or acc_backcode.lower() in ('nan', 'none', ''):
             acc_backcode = bcode
             
-        # Display the accounts combined (e.g. "XOF8012 / S-XOF8012") or single (e.g. "XOF8012")
-        display_acc = " / ".join(sorted(accs))
+        # Select the primary account name to display (prefer the standard one without "S-" prefix)
+        non_s_accs = [a for a in accs if not str(a).startswith('S-')]
+        display_acc = non_s_accs[0] if non_s_accs else sorted(accs)[0]
         
         # Merge trades and positions dataframes
         acc_trades_list = [trades_groups.get(acc, pd.DataFrame()) for acc in accs if not trades_groups.get(acc, pd.DataFrame()).empty]
