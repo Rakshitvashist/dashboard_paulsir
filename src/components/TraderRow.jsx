@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import ValueDisplay from './ValueDisplay.jsx';
 import { formatNum, sumPL } from '../utils.js';
 
@@ -88,7 +88,71 @@ export default function TraderRow({ trader }) {
 }
 
 function PositionsTable({ positions }) {
-  if (!positions.length) return <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>No open positions found.</div>;
+  const clubbedPositions = useMemo(() => {
+    const groups = {};
+    positions.forEach(p => {
+      const key = `${p.Symbol}_${p.Month}`;
+      if (!groups[key]) {
+        groups[key] = {
+          Symbol: p.Symbol,
+          Month: p.Month,
+          netQty: 0,
+          totalBuyQty: 0,
+          totalSellQty: 0,
+          totalBuyVal: 0,
+          totalSellVal: 0,
+          totalQtyAbs: 0,
+          weightedClosingPriceSum: 0,
+          MTM: 0
+        };
+      }
+      
+      const qty = p.Qty || 0;
+      const entryPrice = p.AvgPrice || 0;
+      const closingPrice = p.ClosingPrice || 0;
+      
+      const signedQty = p.Side === 'B' ? qty : -qty;
+      groups[key].netQty += signedQty;
+      groups[key].totalQtyAbs += qty;
+      groups[key].weightedClosingPriceSum += qty * closingPrice;
+      groups[key].MTM += p.MTM || 0;
+      
+      if (p.Side === 'B') {
+        groups[key].totalBuyQty += qty;
+        groups[key].totalBuyVal += qty * entryPrice;
+      } else {
+        groups[key].totalSellQty += qty;
+        groups[key].totalSellVal += qty * entryPrice;
+      }
+    });
+    
+    return Object.values(groups).map(g => {
+      let avgEntryPrice = 0;
+      if (g.netQty > 0 && g.totalBuyQty > 0) {
+        avgEntryPrice = g.totalBuyVal / g.totalBuyQty;
+      } else if (g.netQty < 0 && g.totalSellQty > 0) {
+        avgEntryPrice = g.totalSellVal / g.totalSellQty;
+      } else {
+        const totalTradesQty = g.totalBuyQty + g.totalSellQty;
+        if (totalTradesQty > 0) {
+          avgEntryPrice = (g.totalBuyVal + g.totalSellVal) / totalTradesQty;
+        }
+      }
+      
+      const avgClosingPrice = g.totalQtyAbs > 0 ? g.weightedClosingPriceSum / g.totalQtyAbs : 0;
+      
+      return {
+        Symbol: g.Symbol,
+        Month: g.Month,
+        Qty: g.netQty,
+        AvgPrice: avgEntryPrice,
+        ClosingPrice: avgClosingPrice,
+        MTM: g.MTM
+      };
+    });
+  }, [positions]);
+
+  if (!clubbedPositions.length) return <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>No open positions found.</div>;
   
   const totalPL = sumPL(positions);
   
@@ -98,7 +162,6 @@ function PositionsTable({ positions }) {
         <tr>
           <th>Symbol</th>
           <th>Month</th>
-          <th>Side</th>
           <th>Quantity</th>
           <th>Entry Price</th>
           <th>Closing Price</th>
@@ -106,23 +169,27 @@ function PositionsTable({ positions }) {
         </tr>
       </thead>
       <tbody>
-        {positions.map((p, i) => (
-          <tr key={i}>
-            <td><strong>{p.Symbol}</strong></td>
-            <td>{p.Month}</td>
-            <td className={p.Side === 'B' ? 'val-buy' : 'val-sell'}><strong>{p.Side === 'B' ? 'BUY' : 'SELL'}</strong></td>
-            <td>{p.Qty}</td>
-            <td>{p.AvgPrice.toFixed(4)}</td>
-            <td>{p.ClosingPrice.toFixed(4)}</td>
-            <td className={p.MTM >= 0 ? 'val-pos' : 'val-neg'}>
-              <strong>$<ValueDisplay value={p.MTM} text={formatNum(p.MTM)} /></strong>
-            </td>
-          </tr>
-        ))}
+        {clubbedPositions.map((p, i) => {
+          const qtyText = p.Qty > 0 ? `+${p.Qty}` : p.Qty < 0 ? `${p.Qty}` : '0';
+          const qtyClass = p.Qty > 0 ? 'val-buy' : p.Qty < 0 ? 'val-sell' : '';
+          
+          return (
+            <tr key={i}>
+              <td><strong>{p.Symbol}</strong></td>
+              <td>{p.Month}</td>
+              <td className={qtyClass}><strong>{qtyText}</strong></td>
+              <td>{p.AvgPrice.toFixed(4)}</td>
+              <td>{p.ClosingPrice.toFixed(4)}</td>
+              <td className={p.MTM >= 0 ? 'val-pos' : 'val-neg'}>
+                <strong>$<ValueDisplay value={p.MTM} text={formatNum(p.MTM)} /></strong>
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
       <tfoot>
         <tr style={{ background: '#f8fafc', fontWeight: 700 }}>
-          <td colSpan="6" style={{ textAlign: 'right' }}>TOTAL GROSS P&L:</td>
+          <td colSpan="5" style={{ textAlign: 'right' }}>TOTAL GROSS P&L:</td>
           <td className={totalPL >= 0 ? 'val-pos' : 'val-neg'}>${formatNum(totalPL)}</td>
         </tr>
       </tfoot>
