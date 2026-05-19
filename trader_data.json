@@ -4644,6 +4644,178 @@
     ]
   },
   {
+    "account": "S-XOF8014",
+    "name": "CHANDRA KANT MISHRA",
+    "backcode": "PF032",
+    "is_master": false,
+    "total_buy_qty": 12,
+    "buy_value": 1244.8600000000004,
+    "avg_buy": 103.73833333333336,
+    "total_sell_qty": 1,
+    "sell_value": 103.71,
+    "avg_sell": 103.71,
+    "net_position": 11,
+    "gross_pl": 0.0,
+    "num_trades": 13,
+    "volatility": 0.059517289020143554,
+    "symbols": [
+      "DINR"
+    ],
+    "trades": [
+      {
+        "Time": "11:13:16",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.8,
+        "Value": 103.8,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "11:13:16",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.8,
+        "Value": 103.8,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "11:52:08",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.82,
+        "Value": 103.82,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:11:47",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.79,
+        "Value": 103.79,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:11:47",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.79,
+        "Value": 103.79,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:15:10",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.78,
+        "Value": 103.78,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:41:41",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "12:41:41",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "13:39:35",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "13:39:35",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "13:39:48",
+        "Symbol": "DINR",
+        "Side": "S",
+        "Qty": 1,
+        "Price": 103.71,
+        "Value": 103.71,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "14:30:54",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      },
+      {
+        "Time": "14:30:54",
+        "Symbol": "DINR",
+        "Side": "B",
+        "Qty": 1,
+        "Price": 103.68,
+        "Value": 103.68,
+        "Exchange": "DGCX",
+        "Expiry": "May 26"
+      }
+    ],
+    "positions": [
+      {
+        "scrip": "DINR-DGCX",
+        "exchange": "DGCX",
+        "scrip_name": "DINR",
+        "expiry_date": "May 26",
+        "callput": "NaN",
+        "strike": 0,
+        "bf_qty": 0,
+        "buy_qty": 12,
+        "sell_qty": 1,
+        "net_qty": 11,
+        "average_rate": 103.73833333333336,
+        "ltp": 103.68,
+        "mtm": 0.0,
+        "intraday_mtm": 0.0,
+        "exchange_delta": 0,
+        "day_bought_qty": 12,
+        "day_sold_qty": 1
+      }
+    ]
+  },
+  {
     "account": "XOF8014",
     "name": "CHANDRA KANT MISHRA",
     "backcode": "PF032",
@@ -4833,178 +5005,6 @@
         "exchange_delta": 1,
         "day_bought_qty": 1,
         "day_sold_qty": 12
-      }
-    ]
-  },
-  {
-    "account": "S-XOF8014",
-    "name": "CHANDRA KANT MISHRA",
-    "backcode": "PF032",
-    "is_master": false,
-    "total_buy_qty": 12,
-    "buy_value": 1244.8600000000004,
-    "avg_buy": 103.73833333333336,
-    "total_sell_qty": 1,
-    "sell_value": 103.71,
-    "avg_sell": 103.71,
-    "net_position": 11,
-    "gross_pl": 0.0,
-    "num_trades": 13,
-    "volatility": 0.059517289020143554,
-    "symbols": [
-      "DINR"
-    ],
-    "trades": [
-      {
-        "Time": "11:13:16",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.8,
-        "Value": 103.8,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "11:13:16",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.8,
-        "Value": 103.8,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "11:52:08",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.82,
-        "Value": 103.82,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:11:47",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.79,
-        "Value": 103.79,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:11:47",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.79,
-        "Value": 103.79,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:15:10",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.78,
-        "Value": 103.78,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:41:41",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "12:41:41",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "13:39:35",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "13:39:35",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "13:39:48",
-        "Symbol": "DINR",
-        "Side": "S",
-        "Qty": 1,
-        "Price": 103.71,
-        "Value": 103.71,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "14:30:54",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      },
-      {
-        "Time": "14:30:54",
-        "Symbol": "DINR",
-        "Side": "B",
-        "Qty": 1,
-        "Price": 103.68,
-        "Value": 103.68,
-        "Exchange": "DGCX",
-        "Expiry": "May 26"
-      }
-    ],
-    "positions": [
-      {
-        "scrip": "DINR-DGCX",
-        "exchange": "DGCX",
-        "scrip_name": "DINR",
-        "expiry_date": "May 26",
-        "callput": "NaN",
-        "strike": 0,
-        "bf_qty": 0,
-        "buy_qty": 12,
-        "sell_qty": 1,
-        "net_qty": 11,
-        "average_rate": 103.73833333333336,
-        "ltp": 103.68,
-        "mtm": 0.0,
-        "intraday_mtm": 0.0,
-        "exchange_delta": 0,
-        "day_bought_qty": 12,
-        "day_sold_qty": 1
       }
     ]
   },
