@@ -64,26 +64,34 @@ def process_trading_data():
 
     df_trades['Account'] = df_trades['Account'].apply(clean_acc)
     df_trades['Value'] = df_trades['Price'] * df_trades['Qty']
+    df_trades = df_trades[~df_trades['Symbol'].str.contains('-', na=False)]
 
     MONTH_MAP = {
         'F': 'Jan', 'G': 'Feb', 'H': 'Mar', 'J': 'Apr', 'K': 'May', 'M': 'Jun',
         'N': 'Jul', 'Q': 'Aug', 'U': 'Sep', 'V': 'Oct', 'X': 'Nov', 'Z': 'Dec'
     }
 
-    def parse_trade_symbol(symbol):
+    def parse_date_to_contract_month(date_str):
+        date_str = str(date_str).strip()
+        parts = date_str.split('-')
+        if len(parts) == 3:
+            day, month, year = parts
+            if len(year) == 4:
+                return f"{month} {year[-2:]}"
+        return None
+
+    def parse_trade_symbol(symbol, date_str):
         symbol = str(symbol).strip()
-        if '-' in symbol:
-            return None, None
+        contract_month = parse_date_to_contract_month(date_str)
+        base_symbol = symbol
         if len(symbol) >= 4:
             month_char = symbol[-3]
             year_code = symbol[-2:]
-            base_symbol = symbol[:-3]
             if month_char in MONTH_MAP and year_code.isdigit():
-                month_name = f"{MONTH_MAP[month_char]} {year_code}"
-                return base_symbol, month_name
-        return symbol, None
+                base_symbol = symbol[:-3]
+        return base_symbol, contract_month
 
-    parsed_symbols = df_trades['Symbol'].apply(parse_trade_symbol)
+    parsed_symbols = df_trades.apply(lambda r: parse_trade_symbol(r['Symbol'], r['Date']), axis=1)
     df_trades['BaseSymbol'] = [p[0] for p in parsed_symbols]
     df_trades['ContractMonth'] = [p[1] for p in parsed_symbols]
 
@@ -105,6 +113,8 @@ def process_trading_data():
     # Clean Client_No in positions
     if not df_positions.empty:
         df_positions['Client_No'] = df_positions['Client_No'].apply(clean_acc)
+        df_positions['Com_cd'] = df_positions['Com_cd'].astype(str).str.strip()
+        df_positions['Contract_Month'] = df_positions['Contract_Month'].astype(str).str.strip()
         df_positions['Unrealised_pl_value'] = pd.to_numeric(df_positions['Unrealised_pl_value'], errors='coerce').fillna(0)
         df_positions['Traded_Qty'] = pd.to_numeric(df_positions['Traded_Qty'], errors='coerce').fillna(0)
         df_positions['Traded_Price'] = pd.to_numeric(df_positions['Traded_Price'], errors='coerce').fillna(0)
@@ -177,16 +187,6 @@ def process_trading_data():
         # Gross P&L (Sum of MTM)
         gross_pl = float(acc_positions['Unrealised_pl_value'].sum()) if not acc_positions.empty else 0.0
         
-        # Net position
-        if not acc_trades.empty:
-            net_position = total_buy_qty - total_sell_qty
-        elif not acc_positions.empty:
-            pos_buys = acc_positions[acc_positions['Buy_Sell'] == 'B']['Traded_Qty'].sum()
-            pos_sells = acc_positions[acc_positions['Buy_Sell'] == 'S']['Traded_Qty'].sum()
-            net_position = int(pos_buys - pos_sells)
-        else:
-            net_position = 0
-            
         symbols = set()
         if not acc_trades.empty: symbols.update(acc_trades['Symbol'].unique())
         if not acc_positions.empty: symbols.update(acc_positions['Com_cd'].unique())
@@ -210,41 +210,53 @@ def process_trading_data():
         
         # Current Positions Detail in sampe.xlsx format
         current_positions = []
+        
+        # Get all unique (BaseSymbol, ContractMonth) from trades and positions
+        all_keys = set()
         if not acc_positions.empty:
-            groups = acc_positions.groupby(['Com_cd', 'Contract_Month'])
-            for (com_cd, contract_month), gp in groups:
-                com_cd_clean = str(com_cd).strip()
-                month_clean = str(contract_month).strip()
-                
-                # Fetch first row for common properties
+            for _, row in acc_positions.iterrows():
+                com_cd = str(row.get('Com_cd', '')).strip()
+                month = str(row.get('Contract_Month', '')).strip()
+                if com_cd and month and com_cd != 'nan' and month != 'nan':
+                    all_keys.add((com_cd, month))
+                    
+        if not acc_trades.empty:
+            for _, row in acc_trades.iterrows():
+                base_sym = row.get('BaseSymbol')
+                month = row.get('ContractMonth')
+                if base_sym and month:
+                    base_sym_str = str(base_sym).strip()
+                    month_str = str(month).strip()
+                    if base_sym_str and month_str and base_sym_str != 'nan' and month_str != 'nan':
+                        all_keys.add((base_sym_str, month_str))
+                    
+        for com_cd_clean, month_clean in sorted(list(all_keys)):
+            # Get matching positions rows
+            gp = acc_positions[
+                (acc_positions['Com_cd'] == com_cd_clean) & 
+                (acc_positions['Contract_Month'] == month_clean)
+            ] if not acc_positions.empty else pd.DataFrame()
+            
+            # Today's trades matching this symbol and month
+            matching_trades = acc_trades[
+                (acc_trades['BaseSymbol'] == com_cd_clean) & 
+                (acc_trades['ContractMonth'] == month_clean)
+            ] if 'BaseSymbol' in acc_trades.columns and not acc_trades.empty else pd.DataFrame()
+            
+            buy_qty = int(matching_trades[matching_trades['Side'] == 'B']['Qty'].sum()) if not matching_trades.empty else 0
+            sell_qty = int(matching_trades[matching_trades['Side'] == 'S']['Qty'].sum()) if not matching_trades.empty else 0
+            
+            if not gp.empty:
                 first_row = gp.iloc[0]
                 exch = str(first_row.get('Exch_Cd', '')).strip()
-                scrip = f"{com_cd_clean}-{exch}"
-                
                 strike = first_row.get('Strike_Price', 0)
-                if pd.isna(strike):
-                    strike = 0
-                else:
-                    strike = float(strike)
-                    
+                strike = 0 if pd.isna(strike) else float(strike)
+                
                 callput = first_row.get('Call_Put', '')
-                if pd.isna(callput) or str(callput).strip() == '':
-                    callput = 'NaN'
-                else:
-                    callput = str(callput).strip()
-                
-                # Today's trades matching this symbol and month
-                matching_trades = acc_trades[
-                    (acc_trades['BaseSymbol'] == com_cd_clean) & 
-                    (acc_trades['ContractMonth'] == month_clean)
-                ] if 'BaseSymbol' in acc_trades.columns else pd.DataFrame()
-                
-                buy_qty = int(matching_trades[matching_trades['Side'] == 'B']['Qty'].sum()) if not matching_trades.empty else 0
-                sell_qty = int(matching_trades[matching_trades['Side'] == 'S']['Qty'].sum()) if not matching_trades.empty else 0
+                callput = 'NaN' if pd.isna(callput) or str(callput).strip() == '' else str(callput).strip()
                 
                 # Net position from PHILLIP positions
                 net_qty = int(gp.apply(lambda r: r['Traded_Qty'] if r['Buy_Sell'] == 'B' else -r['Traded_Qty'], axis=1).sum())
-                bf_qty = net_qty - buy_qty + sell_qty
                 
                 # Weighted Entry Rate
                 buy_gp = gp[gp['Buy_Sell'] == 'B']
@@ -253,15 +265,15 @@ def process_trading_data():
                 buy_val = float((buy_gp['Traded_Qty'] * buy_gp['Traded_Price']).sum())
                 sell_val = float((sell_gp['Traded_Qty'] * sell_gp['Traded_Price']).sum())
                 
-                total_buy_qty = float(buy_gp['Traded_Qty'].sum())
-                total_sell_qty = float(sell_gp['Traded_Qty'].sum())
+                grp_buy_qty = float(buy_gp['Traded_Qty'].sum())
+                grp_sell_qty = float(sell_gp['Traded_Qty'].sum())
                 
-                if net_qty > 0 and total_buy_qty > 0:
-                    average_rate = buy_val / total_buy_qty
-                elif net_qty < 0 and total_sell_qty > 0:
-                    average_rate = sell_val / total_sell_qty
+                if net_qty > 0 and grp_buy_qty > 0:
+                    average_rate = buy_val / grp_buy_qty
+                elif net_qty < 0 and grp_sell_qty > 0:
+                    average_rate = sell_val / grp_sell_qty
                 else:
-                    total_trades_qty = total_buy_qty + total_sell_qty
+                    total_trades_qty = grp_buy_qty + grp_sell_qty
                     average_rate = (buy_val + sell_val) / total_trades_qty if total_trades_qty > 0 else 0.0
                 
                 # Weighted average Closing Price (LTP)
@@ -272,33 +284,55 @@ def process_trading_data():
                 # MTM
                 mtm = float(gp['Unrealised_pl_value'].sum())
                 
-                # Intraday MTM
-                intraday_mtm = 0.0
-                
                 # Exchange Delta
                 com_type = str(first_row.get('Com_Type', '')).strip()
                 exchange_delta = 1 if com_type == 'F' else 0
+            else:
+                # No overnight position, it is an intraday-only position
+                exch = matching_trades.iloc[0]['Exchange'] if not matching_trades.empty else 'SGX'
+                strike = 0
+                callput = 'NaN'
+                net_qty = buy_qty - sell_qty
                 
-                current_positions.append({
-                    'scrip': scrip,
-                    'exchange': exch,
-                    'scrip_name': com_cd_clean,
-                    'expiry_date': month_clean,
-                    'callput': callput,
-                    'strike': strike,
-                    'bf_qty': bf_qty,
-                    'buy_qty': buy_qty,
-                    'sell_qty': sell_qty,
-                    'net_qty': net_qty,
-                    'average_rate': average_rate,
-                    'ltp': ltp,
-                    'mtm': mtm,
-                    'intraday_mtm': intraday_mtm,
-                    'exchange_delta': exchange_delta,
-                    'day_bought_qty': buy_qty,
-                    'day_sold_qty': sell_qty
-                })
+                # Average rate from today's trades
+                if net_qty > 0:
+                    average_rate = float(matching_trades[matching_trades['Side'] == 'B']['Value'].sum()) / buy_qty if buy_qty > 0 else 0.0
+                elif net_qty < 0:
+                    average_rate = float(matching_trades[matching_trades['Side'] == 'S']['Value'].sum()) / sell_qty if sell_qty > 0 else 0.0
+                else:
+                    average_rate = float(matching_trades['Value'].sum()) / (buy_qty + sell_qty) if (buy_qty + sell_qty) > 0 else 0.0
+                    
+                ltp = float(matching_trades.iloc[-1]['Price']) if not matching_trades.empty else 0.0
+                mtm = 0.0
+                exchange_delta = 0
+                
+            bf_qty = net_qty - buy_qty + sell_qty
+            scrip = f"{com_cd_clean}-{exch}"
+            intraday_mtm = 0.0
             
+            current_positions.append({
+                'scrip': scrip,
+                'exchange': exch,
+                'scrip_name': com_cd_clean,
+                'expiry_date': month_clean,
+                'callput': callput,
+                'strike': strike,
+                'bf_qty': bf_qty,
+                'buy_qty': buy_qty,
+                'sell_qty': sell_qty,
+                'net_qty': net_qty,
+                'average_rate': average_rate,
+                'ltp': ltp,
+                'mtm': mtm,
+                'intraday_mtm': intraday_mtm,
+                'exchange_delta': exchange_delta,
+                'day_bought_qty': buy_qty,
+                'day_sold_qty': sell_qty
+            })
+            
+        # Net position is the sum of ending net quantities across all contracts
+        net_position = sum(p['net_qty'] for p in current_positions)
+        
         traders_list.append({
             'account': str(acc),
             'name': acc_name,
