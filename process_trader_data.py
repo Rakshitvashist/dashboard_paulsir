@@ -165,15 +165,36 @@ def process_trading_data():
         
     traders_list = []
 
+    # Group accounts by backcode so that accounts with the same backcode (e.g. PF030) are merged
+    backcode_to_accounts = {}
     for acc in all_accounts:
-        if not client_map or acc not in client_map:
-            continue
+        if client_map and acc in client_map:
+            bcode = str(client_map[acc]['backcode']).strip()
+            # If backcode is empty, nan, or missing, keep the account independent
+            if not bcode or bcode.lower() in ('nan', 'none', ''):
+                bcode = f"UNTAGGED_{acc}"
             
-        acc_info = client_map[acc]
+            if bcode not in backcode_to_accounts:
+                backcode_to_accounts[bcode] = []
+            backcode_to_accounts[bcode].append(acc)
+
+    for bcode, accs in backcode_to_accounts.items():
+        primary_acc = accs[0]
+        acc_info = client_map[primary_acc]
         acc_name = acc_info['name']
-        acc_backcode = acc_info['backcode']
-        acc_trades = trades_groups.get(acc, pd.DataFrame())
-        acc_positions = positions_groups.get(acc, pd.DataFrame())
+        acc_backcode = str(acc_info['backcode']).strip()
+        if not acc_backcode or acc_backcode.lower() in ('nan', 'none', ''):
+            acc_backcode = bcode
+            
+        # Display the accounts combined (e.g. "XOF8012 / S-XOF8012") or single (e.g. "XOF8012")
+        display_acc = " / ".join(sorted(accs))
+        
+        # Merge trades and positions dataframes
+        acc_trades_list = [trades_groups.get(acc, pd.DataFrame()) for acc in accs if not trades_groups.get(acc, pd.DataFrame()).empty]
+        acc_positions_list = [positions_groups.get(acc, pd.DataFrame()) for acc in accs if not positions_groups.get(acc, pd.DataFrame()).empty]
+        
+        acc_trades = pd.concat(acc_trades_list, ignore_index=True) if acc_trades_list else pd.DataFrame()
+        acc_positions = pd.concat(acc_positions_list, ignore_index=True) if acc_positions_list else pd.DataFrame()
         
         # Metrics from trades
         if not acc_trades.empty:
@@ -398,11 +419,13 @@ def process_trading_data():
         # Net position is the sum of ending net quantities across all contracts
         net_position = sum(p['net_qty'] for p in current_positions)
         
+        is_master = any(str(a).endswith('9000') for a in accs)
+
         traders_list.append({
-            'account': str(acc),
+            'account': display_acc,
             'name': acc_name,
             'backcode': acc_backcode,
-            'is_master': True if str(acc) == 'XOF9000' else False,
+            'is_master': is_master,
             'total_buy_qty': total_buy_qty,
             'buy_value': buy_value,
             'avg_buy': avg_buy,
@@ -435,19 +458,6 @@ def process_trading_data():
         # Also write/copy to dist/trader_data.json if dist folder exists for static host support
         if os.path.exists('dist'):
             shutil.copy('trader_data.json', 'dist/trader_data.json')
-            
-            # Also copy dist/index.html to root index.html so GitHub Pages loads it immediately at the root URL
-            if os.path.exists('dist/index.html'):
-                shutil.copy('dist/index.html', 'index.html')
-                
-            # Also copy dist/assets/ to root assets/ so assets resolve correctly in the root index.html
-            if os.path.exists('dist/assets'):
-                if os.path.exists('assets'):
-                    try:
-                        shutil.rmtree('assets')
-                    except:
-                        pass
-                shutil.copytree('dist/assets', 'assets')
     except Exception as e:
         print(f"Error saving JSON file: {e}")
         if os.path.exists(temp_file):
