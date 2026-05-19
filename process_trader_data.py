@@ -6,13 +6,16 @@ import time
 import glob
 
 def resolve_data_sources():
-    # 1. Find trades file
-    trades_file = '111.csv'
-    if not os.path.exists(trades_file):
-        all_files = glob.glob('.All_*.csv')
-        if all_files:
-            all_files.sort(key=os.path.getmtime, reverse=True)
-            trades_file = all_files[0]
+    # 1. Find trades file (Scan both 111.csv and all .All_*.csv files, and pick the absolute latest by mtime)
+    all_trade_files = []
+    if os.path.exists('111.csv'):
+        all_trade_files.append('111.csv')
+    all_trade_files.extend(glob.glob('.All_*.csv'))
+    
+    trades_file = None
+    if all_trade_files:
+        all_trade_files.sort(key=os.path.getmtime, reverse=True)
+        trades_file = all_trade_files[0]
             
     # 2. Find latest positions files
     pos_files = glob.glob('PHILLIP_Open_Position_*.csv')
