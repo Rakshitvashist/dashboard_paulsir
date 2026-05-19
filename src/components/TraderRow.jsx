@@ -131,8 +131,8 @@ function PositionsTable({ positions }) {
                 <td>{p.expiry_date}</td>
                 <td>{p.strike}</td>
                 <td className={bfQtyClass}>{bfQtyText}</td>
-                <td>{p.buy_qty}</td>
-                <td>{p.sell_qty}</td>
+                <td className={p.buy_qty > 0 ? 'val-buy' : ''}>{p.buy_qty > 0 ? `+${p.buy_qty}` : p.buy_qty}</td>
+                <td className={p.sell_qty > 0 ? 'val-sell' : ''}>{p.sell_qty !== 0 ? `-${Math.abs(p.sell_qty)}` : 0}</td>
                 <td className={netQtyClass}><strong>{netQtyText}</strong></td>
                 <td>{p.average_rate.toFixed(4)}</td>
                 <td>{p.ltp.toFixed(4)}</td>
@@ -143,8 +143,8 @@ function PositionsTable({ positions }) {
                   $<ValueDisplay value={p.intraday_mtm} text={formatNum(p.intraday_mtm)} />
                 </td>
                 <td>{p.exchange_delta}</td>
-                <td>{p.day_bought_qty}</td>
-                <td>{p.day_sold_qty}</td>
+                <td className={p.day_bought_qty > 0 ? 'val-buy' : ''}>{p.day_bought_qty > 0 ? `+${p.day_bought_qty}` : p.day_bought_qty}</td>
+                <td className={p.day_sold_qty > 0 ? 'val-sell' : ''}>{p.day_sold_qty !== 0 ? `-${Math.abs(p.day_sold_qty)}` : 0}</td>
               </tr>
             );
           })}
