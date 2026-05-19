@@ -82,13 +82,19 @@ def process_trading_data():
 
     def parse_trade_symbol(symbol, date_str):
         symbol = str(symbol).strip()
-        contract_month = parse_date_to_contract_month(date_str)
-        base_symbol = symbol
+        
+        # 1. First check if it ends with a valid standard month char and 2-digit year (like IUK26, BRLM26)
         if len(symbol) >= 4:
             month_char = symbol[-3]
             year_code = symbol[-2:]
             if month_char in MONTH_MAP and year_code.isdigit():
                 base_symbol = symbol[:-3]
+                contract_month = f"{MONTH_MAP[month_char]} {year_code}"
+                return base_symbol, contract_month
+                
+        # 2. Fall back to parsing the contract month from the Date column (for plain symbols like DINR)
+        base_symbol = symbol
+        contract_month = parse_date_to_contract_month(date_str)
         return base_symbol, contract_month
 
     parsed_symbols = df_trades.apply(lambda r: parse_trade_symbol(r['Symbol'], r['Date']), axis=1)
