@@ -6,7 +6,28 @@ import pandas as pd
 from datetime import datetime
 
 TRADES_FILE = '111.csv'
+
+# Dynamically resolve POSITIONS_FILE to match the latest active positions file
+import glob
+pos_files = glob.glob('PHILLIP_Open_Position_*.csv')
 POSITIONS_FILE = 'PHILLIP_Open_Position_XOF9000_20260514.csv'
+if pos_files:
+    dates = []
+    for fn in pos_files:
+        parts = fn.split('_')
+        if len(parts) >= 5:
+            date_code = parts[-1].split('.')[0]
+            if date_code.isdigit() and len(date_code) == 8:
+                dates.append(date_code)
+    if dates:
+        latest_date = max(dates)
+        xof_files = [f for f in pos_files if latest_date in f and 'XOF9000' in f]
+        if xof_files:
+            POSITIONS_FILE = xof_files[0]
+        else:
+            POSITIONS_FILE = [f for f in pos_files if latest_date in f][0]
+
+print(f"Target positions file for live simulation: {POSITIONS_FILE}")
 
 # Create backups first
 if not os.path.exists(f"{TRADES_FILE}.bak") and os.path.exists(TRADES_FILE):
