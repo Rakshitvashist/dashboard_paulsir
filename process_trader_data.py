@@ -59,6 +59,13 @@ def process_trading_data():
     # Group by account for fast O(1) group lookup instead of O(N) scanning
     trades_groups = {name: group for name, group in df_trades.groupby('Account')}
     
+    try:
+        df_clients = pd.read_excel('CLNT_MST.xlsx')
+        client_map = dict(zip(df_clients['Account'].astype(str).str.strip(), df_clients['Name'].astype(str).str.strip()))
+    except Exception as e:
+        print(f"Error reading client master file: {e}")
+        client_map = {}
+    
     positions_groups = {}
     if not df_positions.empty:
         positions_groups = {name: group for name, group in df_positions.groupby('Client_No')}
@@ -66,6 +73,10 @@ def process_trading_data():
     traders_list = []
 
     for acc in all_accounts:
+        if str(acc) != 'XOF9000' and (not client_map or acc not in client_map):
+            continue
+            
+        acc_name = client_map.get(acc, "")
         acc_trades = trades_groups.get(acc, pd.DataFrame())
         acc_positions = positions_groups.get(acc, pd.DataFrame())
         
@@ -143,6 +154,7 @@ def process_trading_data():
             
         traders_list.append({
             'account': str(acc),
+            'name': acc_name,
             'is_master': True if str(acc) == 'XOF9000' else False,
             'total_buy_qty': total_buy_qty,
             'buy_value': buy_value,
