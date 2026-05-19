@@ -88,112 +88,78 @@ export default function TraderRow({ trader }) {
 }
 
 function PositionsTable({ positions }) {
-  const clubbedPositions = useMemo(() => {
-    const groups = {};
-    positions.forEach(p => {
-      const key = `${p.Symbol}_${p.Month}`;
-      if (!groups[key]) {
-        groups[key] = {
-          Symbol: p.Symbol,
-          Month: p.Month,
-          netQty: 0,
-          totalBuyQty: 0,
-          totalSellQty: 0,
-          totalBuyVal: 0,
-          totalSellVal: 0,
-          totalQtyAbs: 0,
-          weightedClosingPriceSum: 0,
-          MTM: 0
-        };
-      }
-      
-      const qty = p.Qty || 0;
-      const entryPrice = p.AvgPrice || 0;
-      const closingPrice = p.ClosingPrice || 0;
-      
-      const signedQty = p.Side === 'B' ? qty : -qty;
-      groups[key].netQty += signedQty;
-      groups[key].totalQtyAbs += qty;
-      groups[key].weightedClosingPriceSum += qty * closingPrice;
-      groups[key].MTM += p.MTM || 0;
-      
-      if (p.Side === 'B') {
-        groups[key].totalBuyQty += qty;
-        groups[key].totalBuyVal += qty * entryPrice;
-      } else {
-        groups[key].totalSellQty += qty;
-        groups[key].totalSellVal += qty * entryPrice;
-      }
-    });
-    
-    return Object.values(groups).map(g => {
-      let avgEntryPrice = 0;
-      if (g.netQty > 0 && g.totalBuyQty > 0) {
-        avgEntryPrice = g.totalBuyVal / g.totalBuyQty;
-      } else if (g.netQty < 0 && g.totalSellQty > 0) {
-        avgEntryPrice = g.totalSellVal / g.totalSellQty;
-      } else {
-        const totalTradesQty = g.totalBuyQty + g.totalSellQty;
-        if (totalTradesQty > 0) {
-          avgEntryPrice = (g.totalBuyVal + g.totalSellVal) / totalTradesQty;
-        }
-      }
-      
-      const avgClosingPrice = g.totalQtyAbs > 0 ? g.weightedClosingPriceSum / g.totalQtyAbs : 0;
-      
-      return {
-        Symbol: g.Symbol,
-        Month: g.Month,
-        Qty: g.netQty,
-        AvgPrice: avgEntryPrice,
-        ClosingPrice: avgClosingPrice,
-        MTM: g.MTM
-      };
-    });
-  }, [positions]);
-
-  if (!clubbedPositions.length) return <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>No open positions found.</div>;
+  if (!positions.length) return <div style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>No open positions found.</div>;
   
-  const totalPL = sumPL(positions);
+  const totalPL = positions.reduce((sum, p) => sum + (p.mtm || 0), 0);
   
   return (
-    <table className="pro-table">
-      <thead>
-        <tr>
-          <th>Symbol</th>
-          <th>Month</th>
-          <th>Quantity</th>
-          <th>Entry Price</th>
-          <th>Closing Price</th>
-          <th>MTM (P&L)</th>
-        </tr>
-      </thead>
-      <tbody>
-        {clubbedPositions.map((p, i) => {
-          const qtyText = p.Qty > 0 ? `+${p.Qty}` : p.Qty < 0 ? `${p.Qty}` : '0';
-          const qtyClass = p.Qty > 0 ? 'val-buy' : p.Qty < 0 ? 'val-sell' : '';
-          
-          return (
-            <tr key={i}>
-              <td><strong>{p.Symbol}</strong></td>
-              <td>{p.Month}</td>
-              <td className={qtyClass}><strong>{qtyText}</strong></td>
-              <td>{p.AvgPrice.toFixed(4)}</td>
-              <td>{p.ClosingPrice.toFixed(4)}</td>
-              <td className={p.MTM >= 0 ? 'val-pos' : 'val-neg'}>
-                <strong>$<ValueDisplay value={p.MTM} text={formatNum(p.MTM)} /></strong>
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-      <tfoot>
-        <tr style={{ background: '#f8fafc', fontWeight: 700 }}>
-          <td colSpan="5" style={{ textAlign: 'right' }}>TOTAL GROSS P&L:</td>
-          <td className={totalPL >= 0 ? 'val-pos' : 'val-neg'}>${formatNum(totalPL)}</td>
-        </tr>
-      </tfoot>
-    </table>
+    <div style={{ overflowX: 'auto', width: '100%' }}>
+      <table className="pro-table" style={{ minWidth: '1350px' }}>
+        <thead>
+          <tr>
+            <th>SCRIP</th>
+            <th>EXCHANGE</th>
+            <th>Scrip Name</th>
+            <th>Expiry Date</th>
+            <th>CALLPUT</th>
+            <th>STRIKE</th>
+            <th>BF QTY</th>
+            <th>Buy Qty</th>
+            <th>Sell Qty</th>
+            <th>Net Qty</th>
+            <th>Average Rate</th>
+            <th>LTP</th>
+            <th>MTM</th>
+            <th>IntraDay Mtm</th>
+            <th>Exchange Delta</th>
+            <th>Day Bought Qty</th>
+            <th>Day Sold Qty</th>
+          </tr>
+        </thead>
+        <tbody>
+          {positions.map((p, i) => {
+            const netQtyClass = p.net_qty > 0 ? 'val-buy' : p.net_qty < 0 ? 'val-sell' : '';
+            const netQtyText = p.net_qty > 0 ? `+${p.net_qty}` : `${p.net_qty}`;
+            
+            const bfQtyClass = p.bf_qty > 0 ? 'val-buy' : p.bf_qty < 0 ? 'val-sell' : '';
+            const bfQtyText = p.bf_qty > 0 ? `+${p.bf_qty}` : `${p.bf_qty}`;
+            
+            return (
+              <tr key={i}>
+                <td><strong>{p.scrip}</strong></td>
+                <td>{p.exchange}</td>
+                <td>{p.scrip_name}</td>
+                <td>{p.expiry_date}</td>
+                <td>{p.callput}</td>
+                <td>{p.strike}</td>
+                <td className={bfQtyClass}>{bfQtyText}</td>
+                <td>{p.buy_qty}</td>
+                <td>{p.sell_qty}</td>
+                <td className={netQtyClass}><strong>{netQtyText}</strong></td>
+                <td>{p.average_rate.toFixed(4)}</td>
+                <td>{p.ltp.toFixed(4)}</td>
+                <td className={p.mtm >= 0 ? 'val-pos' : 'val-neg'}>
+                  <strong>$<ValueDisplay value={p.mtm} text={formatNum(p.mtm)} /></strong>
+                </td>
+                <td className={p.intraday_mtm >= 0 ? 'val-pos' : 'val-neg'}>
+                  $<ValueDisplay value={p.intraday_mtm} text={formatNum(p.intraday_mtm)} />
+                </td>
+                <td>{p.exchange_delta}</td>
+                <td>{p.day_bought_qty}</td>
+                <td>{p.day_sold_qty}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+        <tfoot>
+          <tr style={{ background: '#f8fafc', fontWeight: 700 }}>
+            <td colSpan="12" style={{ textAlign: 'right' }}>TOTAL GROSS P&L:</td>
+            <td className={totalPL >= 0 ? 'val-pos' : 'val-neg'}>${formatNum(totalPL)}</td>
+            <td colSpan="4"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
   );
 }
 

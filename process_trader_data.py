@@ -36,6 +36,28 @@ def process_trading_data():
     df_trades['Account'] = df_trades['Account'].apply(clean_acc)
     df_trades['Value'] = df_trades['Price'] * df_trades['Qty']
 
+    MONTH_MAP = {
+        'F': 'Jan', 'G': 'Feb', 'H': 'Mar', 'J': 'Apr', 'K': 'May', 'M': 'Jun',
+        'N': 'Jul', 'Q': 'Aug', 'U': 'Sep', 'V': 'Oct', 'X': 'Nov', 'Z': 'Dec'
+    }
+
+    def parse_trade_symbol(symbol):
+        symbol = str(symbol).strip()
+        if '-' in symbol:
+            return None, None
+        if len(symbol) >= 4:
+            month_char = symbol[-3]
+            year_code = symbol[-2:]
+            base_symbol = symbol[:-3]
+            if month_char in MONTH_MAP and year_code.isdigit():
+                month_name = f"{MONTH_MAP[month_char]} {year_code}"
+                return base_symbol, month_name
+        return symbol, None
+
+    parsed_symbols = df_trades['Symbol'].apply(parse_trade_symbol)
+    df_trades['BaseSymbol'] = [p[0] for p in parsed_symbols]
+    df_trades['ContractMonth'] = [p[1] for p in parsed_symbols]
+
     # 2. Load PHILLIP_Open_Position_XOF9000_20260514.csv (Positions)
     positions_file = 'PHILLIP_Open_Position_XOF9000_20260514.csv'
     if not os.path.exists(positions_file):
@@ -151,18 +173,95 @@ def process_trading_data():
                     'Exchange': str(row['Exchange'])
                 })
         
-        # Current Positions Detail
+        # Current Positions Detail in sampe.xlsx format
         current_positions = []
         if not acc_positions.empty:
-            for _, row in acc_positions.iterrows():
+            groups = acc_positions.groupby(['Com_cd', 'Contract_Month'])
+            for (com_cd, contract_month), gp in groups:
+                com_cd_clean = str(com_cd).strip()
+                month_clean = str(contract_month).strip()
+                
+                # Fetch first row for common properties
+                first_row = gp.iloc[0]
+                exch = str(first_row.get('Exch_Cd', '')).strip()
+                scrip = f"{com_cd_clean}-{exch}"
+                
+                strike = first_row.get('Strike_Price', 0)
+                if pd.isna(strike):
+                    strike = 0
+                else:
+                    strike = float(strike)
+                    
+                callput = first_row.get('Call_Put', '')
+                if pd.isna(callput) or str(callput).strip() == '':
+                    callput = 'NaN'
+                else:
+                    callput = str(callput).strip()
+                
+                # Today's trades matching this symbol and month
+                matching_trades = acc_trades[
+                    (acc_trades['BaseSymbol'] == com_cd_clean) & 
+                    (acc_trades['ContractMonth'] == month_clean)
+                ] if 'BaseSymbol' in acc_trades.columns else pd.DataFrame()
+                
+                buy_qty = int(matching_trades[matching_trades['Side'] == 'B']['Qty'].sum()) if not matching_trades.empty else 0
+                sell_qty = int(matching_trades[matching_trades['Side'] == 'S']['Qty'].sum()) if not matching_trades.empty else 0
+                
+                # Net position from PHILLIP positions
+                net_qty = int(gp.apply(lambda r: r['Traded_Qty'] if r['Buy_Sell'] == 'B' else -r['Traded_Qty'], axis=1).sum())
+                bf_qty = net_qty - buy_qty + sell_qty
+                
+                # Weighted Entry Rate
+                buy_gp = gp[gp['Buy_Sell'] == 'B']
+                sell_gp = gp[gp['Buy_Sell'] == 'S']
+                
+                buy_val = float((buy_gp['Traded_Qty'] * buy_gp['Traded_Price']).sum())
+                sell_val = float((sell_gp['Traded_Qty'] * sell_gp['Traded_Price']).sum())
+                
+                total_buy_qty = float(buy_gp['Traded_Qty'].sum())
+                total_sell_qty = float(sell_gp['Traded_Qty'].sum())
+                
+                if net_qty > 0 and total_buy_qty > 0:
+                    average_rate = buy_val / total_buy_qty
+                elif net_qty < 0 and total_sell_qty > 0:
+                    average_rate = sell_val / total_sell_qty
+                else:
+                    total_trades_qty = total_buy_qty + total_sell_qty
+                    average_rate = (buy_val + sell_val) / total_trades_qty if total_trades_qty > 0 else 0.0
+                
+                # Weighted average Closing Price (LTP)
+                total_qty_abs = gp['Traded_Qty'].sum()
+                weighted_closing_sum = (gp['Traded_Qty'] * gp['Settlement_Price']).sum()
+                ltp = float(weighted_closing_sum / total_qty_abs) if total_qty_abs > 0 else 0.0
+                
+                # MTM
+                mtm = float(gp['Unrealised_pl_value'].sum())
+                
+                # Intraday MTM
+                intraday_mtm = 0.0
+                
+                # Exchange Delta
+                com_type = str(first_row.get('Com_Type', '')).strip()
+                exchange_delta = 1 if com_type == 'F' else 0
+                
                 current_positions.append({
-                    'Symbol': str(row['Com_cd']),
-                    'Month': str(row['Contract_Month']),
-                    'Side': str(row['Buy_Sell']),
-                    'Qty': int(row['Traded_Qty']),
-                    'AvgPrice': float(row['Traded_Price']),
-                    'ClosingPrice': float(row['Settlement_Price']),
-                    'MTM': float(row['Unrealised_pl_value'])
+                    'scrip': scrip,
+                    'exchange': exch,
+                    'scrip_name': com_cd_clean,
+                    'expiry_date': month_clean,
+                    'callput': callput,
+                    'strike': strike,
+                    'bf_qty': bf_qty,
+                    'buy_qty': buy_qty,
+                    'sell_qty': sell_qty,
+                    'net_qty': net_qty,
+                    'average_rate': average_rate,
+                    'ltp': ltp,
+                    'mtm': mtm,
+                    'intraday_mtm': intraday_mtm,
+                    'exchange_delta': exchange_delta,
+                    'day_bought_qty': buy_qty,
+                    'day_sold_qty': sell_qty
                 })
             
         traders_list.append({
