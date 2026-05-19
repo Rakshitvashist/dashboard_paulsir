@@ -112,17 +112,23 @@ function App() {
       }
     });
     
-    // Create download link
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    // Create download link with BOM for perfect Excel UTF-8 support
+    const blob = new Blob(["\ufeff" + csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-    link.setAttribute("href", url);
+    link.href = url;
     
     const dateStr = new Date().toISOString().split('T')[0];
-    link.setAttribute("download", `Institutional_Risk_Report_${dateStr}.csv`);
+    link.download = `Institutional_Risk_Report_${dateStr}.csv`;
+    
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
+    
+    // Clean up asynchronously to allow download engine to initialize successfully
+    setTimeout(() => {
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    }, 200);
   };
 
   return (
