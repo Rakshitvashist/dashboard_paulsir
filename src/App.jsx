@@ -60,7 +60,7 @@ function App() {
     );
   }
 
-  const handleExportExcel = () => {
+  const handleExportExcel = async () => {
     if (!data || data.length === 0) return;
     
     let csvContent = "";
@@ -112,7 +112,31 @@ function App() {
       }
     });
     
-    // Create download link with BOM for perfect Excel UTF-8 support
+    // 6. Trigger native "Save As" file picker popup if supported by browser
+    if (window.showSaveFilePicker) {
+      try {
+        const dateStr = new Date().toISOString().split('T')[0];
+        const handle = await window.showSaveFilePicker({
+          suggestedName: `Institutional_Risk_Report_${dateStr}.csv`,
+          types: [{
+            description: 'CSV Files',
+            accept: {
+              'text/csv': ['.csv'],
+            }
+          }],
+        });
+        const writable = await handle.createWritable();
+        await writable.write("\ufeff" + csvContent);
+        await writable.close();
+        return;
+      } catch (err) {
+        // User cancelled or closed the Save As dialog
+        if (err.name === 'AbortError') return;
+        console.warn("Save picker error, falling back: ", err);
+      }
+    }
+
+    // Fallback: Standard browser download link with UTF-8 BOM
     const blob = new Blob(["\ufeff" + csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -124,7 +148,6 @@ function App() {
     document.body.appendChild(link);
     link.click();
     
-    // Clean up asynchronously to allow download engine to initialize successfully
     setTimeout(() => {
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
