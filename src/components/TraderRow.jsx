@@ -94,14 +94,13 @@ function PositionsTable({ positions }) {
   
   return (
     <div style={{ overflowX: 'auto', width: '100%' }}>
-      <table className="pro-table" style={{ minWidth: '1350px' }}>
+      <table className="pro-table" style={{ minWidth: '1280px' }}>
         <thead>
           <tr>
             <th>SCRIP</th>
             <th>EXCHANGE</th>
             <th>Scrip Name</th>
             <th>Expiry Date</th>
-            <th>CALLPUT</th>
             <th>STRIKE</th>
             <th>BF QTY</th>
             <th>Buy Qty</th>
@@ -130,7 +129,6 @@ function PositionsTable({ positions }) {
                 <td>{p.exchange}</td>
                 <td>{p.scrip_name}</td>
                 <td>{p.expiry_date}</td>
-                <td>{p.callput}</td>
                 <td>{p.strike}</td>
                 <td className={bfQtyClass}>{bfQtyText}</td>
                 <td>{p.buy_qty}</td>
@@ -153,7 +151,7 @@ function PositionsTable({ positions }) {
         </tbody>
         <tfoot>
           <tr style={{ background: '#f8fafc', fontWeight: 700 }}>
-            <td colSpan="12" style={{ textAlign: 'right' }}>TOTAL GROSS P&L:</td>
+            <td colSpan="11" style={{ textAlign: 'right' }}>TOTAL GROSS P&L:</td>
             <td className={totalPL >= 0 ? 'val-pos' : 'val-neg'}>${formatNum(totalPL)}</td>
             <td colSpan="4"></td>
           </tr>

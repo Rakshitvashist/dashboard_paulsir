@@ -163,9 +163,12 @@ def process_trading_data():
         trades_history = []
         if not acc_trades.empty:
             for _, row in acc_trades.iterrows():
+                sym = str(row['Symbol'])
+                if '-' in sym:
+                    continue
                 trades_history.append({
                     'Time': str(row['Time']),
-                    'Symbol': str(row['Symbol']),
+                    'Symbol': sym,
                     'Side': str(row['Side']),
                     'Qty': int(row['Qty']),
                     'Price': float(row['Price']),
