@@ -38,6 +38,15 @@ def process_trading_data():
     trades_file, positions_files = resolve_data_sources()
     print(f"Processing Trades from: {trades_file}")
     print(f"Processing Positions from: {positions_files}")
+    
+    # Load live prices if available for real-time live MTM and price updates
+    live_prices = {}
+    if os.path.exists('live_prices.json'):
+        try:
+            with open('live_prices.json', 'r') as f:
+                live_prices = json.load(f)
+        except Exception as e:
+            print(f"Error reading live_prices.json: {e}")
 
     if not trades_file or not os.path.exists(trades_file):
         print("Error: No trades file found")
@@ -256,6 +265,23 @@ def process_trading_data():
             buy_qty = int(matching_trades[matching_trades['Side'] == 'B']['Qty'].sum()) if not matching_trades.empty else 0
             sell_qty = int(matching_trades[matching_trades['Side'] == 'S']['Qty'].sum()) if not matching_trades.empty else 0
             
+            # Match symbol name in live prices: com_cd_clean + month letter + year code (e.g. "IUK26") or com_cd_clean ("IU")
+            INV_MONTH_MAP = {v: k for k, v in MONTH_MAP.items()}
+            parts = month_clean.split(' ')
+            month_let = ''
+            year_code = ''
+            if len(parts) == 2 and parts[0] in INV_MONTH_MAP:
+                month_let = INV_MONTH_MAP[parts[0]]
+                year_code = parts[1]
+            contract_code = f"{com_cd_clean}{month_let}{year_code}" if month_let else com_cd_clean
+            
+            live_ltp = None
+            if live_prices:
+                if contract_code in live_prices:
+                    live_ltp = float(live_prices[contract_code])
+                elif com_cd_clean in live_prices:
+                    live_ltp = float(live_prices[com_cd_clean])
+            
             if not gp.empty:
                 first_row = gp.iloc[0]
                 exch = str(first_row.get('Exch_Cd', '')).strip()
@@ -291,8 +317,23 @@ def process_trading_data():
                 weighted_closing_sum = (gp['Traded_Qty'] * gp['Settlement_Price']).sum()
                 ltp = float(weighted_closing_sum / total_qty_abs) if total_qty_abs > 0 else 0.0
                 
-                # MTM
+                # Standard Broker MTM
                 mtm = float(gp['Unrealised_pl_value'].sum())
+                
+                # If live_ltp is loaded, dynamically override LTP and calculate Live MTM
+                multiplier = float(first_row.get('Tick_Value', 1.0))
+                if pd.isna(multiplier) or multiplier == 0:
+                    multiplier = 1.0
+                    
+                if live_ltp is not None:
+                    ltp = live_ltp
+                    live_mtm_sum = 0.0
+                    for _, pos_row in gp.iterrows():
+                        side_mult = 1.0 if pos_row['Buy_Sell'] == 'B' else -1.0
+                        pos_qty = float(pos_row['Traded_Qty'])
+                        pos_entry = float(pos_row['Traded_Price'])
+                        live_mtm_sum += (live_ltp - pos_entry) * pos_qty * multiplier * side_mult
+                    mtm = live_mtm_sum
                 
                 # Exchange Delta
                 com_type = str(first_row.get('Com_Type', '')).strip()
@@ -312,8 +353,22 @@ def process_trading_data():
                 else:
                     average_rate = float(matching_trades['Value'].sum()) / (buy_qty + sell_qty) if (buy_qty + sell_qty) > 0 else 0.0
                     
+                # Default ltp is last traded price of today's trades
                 ltp = float(matching_trades.iloc[-1]['Price']) if not matching_trades.empty else 0.0
-                mtm = 0.0
+                
+                if live_ltp is not None:
+                    ltp = live_ltp
+                    
+                # Multiplier fallback
+                multiplier = 1.0
+                if com_cd_clean == 'MGC': multiplier = 10.0
+                elif com_cd_clean == 'SIL': multiplier = 1000.0
+                elif com_cd_clean == 'GO': multiplier = 300.0
+                elif com_cd_clean == 'SVF': multiplier = 3000.0
+                
+                buy_val_total = float(matching_trades[matching_trades['Side'] == 'B']['Value'].sum()) if not matching_trades.empty else 0.0
+                sell_val_total = float(matching_trades[matching_trades['Side'] == 'S']['Value'].sum()) if not matching_trades.empty else 0.0
+                mtm = (sell_val_total - buy_val_total + (net_qty * ltp)) * multiplier
                 exchange_delta = 0
                 
             bf_qty = net_qty - buy_qty + sell_qty
