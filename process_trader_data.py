@@ -205,7 +205,8 @@ def process_trading_data():
                     'Qty': int(row['Qty']),
                     'Price': float(row['Price']),
                     'Value': float(row['Value']),
-                    'Exchange': str(row['Exchange'])
+                    'Exchange': str(row['Exchange']),
+                    'Expiry': str(row['ContractMonth']) if 'ContractMonth' in row else None
                 })
         
         # Current Positions Detail in sampe.xlsx format

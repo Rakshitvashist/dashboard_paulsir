@@ -6,11 +6,23 @@ export default function SymbolSummary({ data }) {
     data.forEach(trader => {
       trader.trades.forEach(t => {
         if (!t.Symbol || t.Symbol.includes('-')) return;
-        if (!map[t.Symbol]) map[t.Symbol] = { buy: 0, sell: 0 };
+        if (!map[t.Symbol]) {
+          map[t.Symbol] = { buy: 0, sell: 0, expiries: new Set() };
+        }
         if (t.Side === 'B') map[t.Symbol].buy += t.Qty;
         else if (t.Side === 'S') map[t.Symbol].sell += t.Qty;
+        
+        if (t.Expiry) {
+          map[t.Symbol].expiries.add(t.Expiry);
+        }
       });
     });
+    
+    // Convert expiries set to sorted string
+    Object.keys(map).forEach(sym => {
+      map[sym].expiriesStr = Array.from(map[sym].expiries).sort().join(', ');
+    });
+    
     return map;
   }, [data]);
 
@@ -27,7 +39,14 @@ export default function SymbolSummary({ data }) {
             const net = symMap[sym].buy - symMap[sym].sell;
             return (
               <div className="symbol-card" key={sym}>
-                <div className="symbol-card-title">{sym}</div>
+                <div className="symbol-card-title">
+                  {sym}
+                  {symMap[sym].expiriesStr && (
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginLeft: '6px', fontWeight: 'normal' }}>
+                      ({symMap[sym].expiriesStr})
+                    </span>
+                  )}
+                </div>
                 <div className="symbol-stats">
                   <div className="stat-group">
                     <span className="stat-label">Buy Qty</span>
